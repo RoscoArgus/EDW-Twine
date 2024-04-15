@@ -12,7 +12,7 @@ T-Ball Story
 }
 
 
-:: Ask your friends if they have a spare ticket you can buy. {"position":"950,350","size":"100,100"}
+:: Ask your friends if they have a spare ticket you can buy. {"position":"950,225","size":"100,100"}
 No luck!!
 
 None of your friends have a spare ticket you can buy from them. You're absolutely devestated.
@@ -32,7 +32,7 @@ OR
 <</button>>
 
 
-:: Chance getting out to use the bathroom {"position":"1475,225","size":"100,100"}
+:: Chance getting out to use the bathroom {"position":"1475,100","size":"100,100"}
 ''The urge was too strong! You couldn't wait.''
 
 You jump out and run around the corner. But just as you turn the corner there are 3 men standing there.
@@ -121,7 +121,7 @@ You watch with anticipation as you crawl nearer the front of the queue.
 <</if>>
 
 
-:: Do you hide somewhere on campus and hope you don't get caught {"position":"1100,350","size":"100,100"}
+:: Do you hide somewhere on campus and hope you don't get caught {"position":"1100,225","size":"100,100"}
 It's the only rational choice. You have to hide on campus.
 
 You get your suit on and ready your supplies.
@@ -149,7 +149,7 @@ and hope you actually fit!
 <</nobr>>
 
 
-:: Do you sneak in on the night {"position":"1100,525","size":"100,100"}
+:: Do you sneak in on the night {"position":"1100,500","size":"100,100"}
 TODO
 
 
@@ -186,7 +186,7 @@ It's been a long time coming, but after so much blood, sweat, and tears, nothing
 <<button "Refresh the page" "Refresh the page.">>[[Refresh the page.]]<</button>>
 
 
-:: Hide in the play house at the college nursery {"position":"1225,350","size":"100,100"}
+:: Hide in the play house at the college nursery {"position":"1225,225","size":"100,100"}
 ''The playhouse!''
 
 Of course why didn't anyone think of this before.
@@ -198,7 +198,7 @@ The plan is fool-proof. Nobodys going to check over here.
 <</button>>
 
 
-:: Hold it. I can wait just a bit longer!! {"position":"1600,350","size":"100,100"}
+:: Hold it. I can wait just a bit longer!! {"position":"1600,225","size":"100,100"}
 ''You perservere.''
 
 If you've waited this long you can wait a bit longer.
@@ -212,7 +212,7 @@ It's dark outside now and you can hear a crowd in the distance. This is it. The 
 <</button>>
 
 
-:: In a recycling bin {"position":"1100,225","size":"100,100"}
+:: In a recycling bin {"position":"1100,100","size":"100,100"}
 ''"This spot has to work" you think.''
 
 No one's finding you here. Who checks the bins the night of Trinity Ball?
@@ -245,7 +245,7 @@ They open the bin and find you cowering in the corner.
 <<button "Begin the Story" "Start">>[[Start]]<</button>>
 
 
-:: It's late enough, you can hear people so you get out {"position":"1350,225","size":"100,100"}
+:: It's late enough, you can hear people so you get out {"position":"1350,100","size":"100,100"}
 ''You crawl your way out of the playhouse.''
 
 The coast seems to be clear!
@@ -264,7 +264,7 @@ You've been caught! It was too soon.
 <</button>>
 
 
-:: Make a run for it!! {"position":"1725,350","size":"100,100"}
+:: Make a run for it!! {"position":"1725,225","size":"100,100"}
 ''You can taste victory!''
 
 After all that work theres only a few metres between you and the night of your life.
@@ -354,7 +354,7 @@ state.restart();
 <<endscript>>
 
 
-:: Run left and hope {"position":"1725,475","size":"100,100"}
+:: Run left and hope {"position":"1725,350","size":"100,100"}
 ''You've ran straight into the guards!!!!''
 
 All that work for nothing.
@@ -366,7 +366,7 @@ All that work for nothing.
 <</button>>
 
 
-:: Run right and hope {"position":"1725,225","size":"100,100"}
+:: Run right and hope {"position":"1725,100","size":"100,100"}
 And with your last bit of effort you squeeze through the fence.
 
 ''"I've finally made it!!!"''
@@ -425,7 +425,7 @@ You are overcome with excitement and happiness. All that work and time payed off
 <<timed 14s>><<type 40ms>><<button "Go to the website" "Go to the website.">>[[Go to the website.]]<</button>><</type>><</timed>>
 
 
-:: Stay in the playhouse for another while longer {"position":"1475,350","size":"100,100"}
+:: Stay in the playhouse for another while longer {"position":"1475,225","size":"100,100"}
 You don't want to chance getting caught so you stay there a little while longer. Your phones dead and you don't know where your friends are.
 
 The sudden urge for the bathroom comes after all them beers you had trying to pass the time.
@@ -548,7 +548,7 @@ The night of T-Ball rolls around and the energy is immense. With so many great a
             <</if>><</if>><</if>><<if visited("The Persistence Ending.") <= 3>><<button "Continue" "The Persistence Ending.">><</button>><</if>>
 
 
-:: Try to steal a ticket. {"position":"1000,675","size":"100,100"}
+:: Try to steal a ticket. {"position":"925,875","size":"100,100"}
 TODO
 
 
@@ -562,7 +562,7 @@ As you type the code into the box, you realise what you've actually been typing.
 [[Try Another Code.|Refresh the page again.]]
 
 
-:: You stuff yourself into the playhouse {"position":"1350,350","size":"100,100"}
+:: You stuff yourself into the playhouse {"position":"1350,225","size":"100,100"}
 ''You've crammed yourself into the playhouse.''
 
 It's a tight fit but its the safest bet you think. Now for the waiting game.
