@@ -354,7 +354,7 @@ OR
 [[Hide in the play house at the college nursery]]
 &lt;&lt;/button&gt;&gt;
 and hope you actually fit!
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Do you sneak in on the night" tags="" position="1075,325" size="100,100">You really want to go to this ball. Everyone you know managed to get a ticket and they&#39;ve been talking about it ever since. 
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Do you sneak in on the night" tags="" position="1075,400" size="100,100">You really want to go to this ball. Everyone you know managed to get a ticket and they&#39;ve been talking about it ever since. 
 
 &#39;&#39;You decide to sneak in.&#39;&#39;
 
@@ -366,6 +366,10 @@ and hope you actually fit!
 
 &lt;&lt;button &quot;Sneak in through the crowd&quot; &quot;Crowd.&quot;&gt;&gt;
 [[Crowd.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Use a disguise&quot; &quot;Use a disguise.&quot;&gt;&gt;
+[[Use a disguise.]]
 &lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Give Up." tags="" position="875,550" size="100,100">&lt;&lt;audio &quot;intense&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;run setTimeout(function () { $.wiki(&#39;&lt;&lt;audio &quot;intense&quot; stop&gt;&gt;&#39;); }, 2000)&gt;&gt;\
 You decide to give up searching for a ticket. What was the point in trying? Obviously there were going to be none left.
@@ -430,7 +434,9 @@ They open the bin and find you cowering in the corner.
 &quot;What?!&quot;, you exclaim under your breath.
 &quot;Did I put it in wrong?&quot;
 
-[[Try Another Code.|Refresh the page again.]]</tw-passagedata><tw-passagedata pid="12" name="Init" tags="" position="100,425" size="100,100">&lt;&lt;button &quot;Begin the Story&quot; &quot;Start&quot;&gt;&gt;[[Start]]&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="It&#39;s late enough, you can hear people so you get out" tags="" position="1350,0" size="100,100">&#39;&#39;You crawl your way out of the playhouse.&#39;&#39;
+&lt;&lt;button &quot;Try Another Code&quot; &quot;Refresh the page again.&quot;&gt;&gt;
+[[Refresh the page again.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Init" tags="" position="100,425" size="100,100">&lt;&lt;button &quot;Begin the Story&quot; &quot;Start&quot;&gt;&gt;[[Start]]&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="It&#39;s late enough, you can hear people so you get out" tags="" position="1350,0" size="100,100">&#39;&#39;You crawl your way out of the playhouse.&#39;&#39;
 
 The coast seems to be clear!
 
@@ -449,9 +455,9 @@ You&#39;ve been caught! It was too soon.
 
 Just run a little further and you&#39;ll be home free.
 
-&#39;&#39;&quot;One last effort&quot; you think to yourself&#39;&#39;
+&#39;&#39;&quot;One last effort&quot; you think to yourself.&#39;&#39;
 
-With your full speed you&#39;re running
+With your full speed you&#39;re running towards the stages.
 
 &#39;&#39;Do you:&#39;&#39;
 
@@ -533,15 +539,23 @@ All that work for nothing.
 
 &lt;&lt;button &quot;Try Another Way&quot; &quot;Ask your friends if they have a spare ticket you can buy.&quot;&gt;&gt;
 [[Ask your friends if they have a spare ticket you can buy.]]
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Run right and hope" tags="" position="1725,0" size="100,100">And with your last bit of effort you&#39;re home free.
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Run right and hope" tags="" position="1725,0" size="100,100">&lt;&lt;audio &quot;spy&quot; volume 0.6 play&gt;&gt;\
+&lt;&lt;run UIBar.stow() &gt;&gt;
+&lt;&lt;script&gt;&gt;
+document.body.style.backgroundColor = &quot;black&quot;;
+document.body.style.color = &quot;white&quot;;
+var sidebar = document.getElementById(&quot;ui-bar&quot;);
+sidebar.style.display=&quot;none&quot;;
+&lt;&lt;/script&gt;&gt;
+And with your last bit of effort you&#39;re home free.
 
 &#39;&#39;&quot;I&#39;ve finally made it!!!&quot;&#39;&#39;
 
 You are overcome with excitement and happiness. All that work and time payed off. You fought the system and beat it!! You can finally relax and enjoy the night.
 
-&#39;&#39;You got the Hidden in Plain Sight Ending.&#39;&#39;
+&lt;img src=&quot;img/bond.jpg&quot; width=&quot;100%&quot;&gt;
 
-&#39;&#39;Congratulations!&#39;&#39;
+&#39;&#39;You achieved the Hidden in Plain Sight Ending.&#39;&#39;
 
 &lt;&lt;button &quot;Play Again.&quot; Restart&gt;&gt;
             [[Play Again.|Restart]]
@@ -621,7 +635,13 @@ You are overcome with excitement and happiness. All that work and time payed off
 
 &lt;&lt;cacheaudio &quot;tunes&quot; &quot;aud/tunes.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;holy&quot; &quot;aud/Arcadia.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Stay in the playhouse for another while longer" tags="" position="1475,125" size="100,100">You don&#39;t want to chance getting caught so you stay there a little while longer. Your phones dead and you don&#39;t know where your friends are.
+&lt;&lt;cacheaudio &quot;holy&quot; &quot;aud/Arcadia.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;countdown&quot; &quot;aud/countdown.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;countdown_end&quot; &quot;aud/countdown_end.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;spy&quot; &quot;aud/spy.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Stay in the playhouse for another while longer" tags="" position="1475,125" size="100,100">You don&#39;t want to chance getting caught so you stay there a little while longer. Your phones dead and you don&#39;t know where your friends are.
 
 The sudden urge for the bathroom comes after all them beers you had trying to pass the time.
 
@@ -643,7 +663,9 @@ OR
 
 &quot;If it was that easy, what would even be the point??&quot;
 
-[[Try Another Code.|Refresh the page again.]]</tw-passagedata><tw-passagedata pid="25" name="The Jinx Ending." tags="" position="500,350" size="100,100">&lt;&lt;audio &quot;intense&quot; fadeoverto 2 0&gt;&gt;\
+&lt;&lt;button &quot;Try Another Code&quot; &quot;Refresh the page again.&quot;&gt;&gt;
+[[Refresh the page again.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="The Jinx Ending." tags="" position="500,350" size="100,100">&lt;&lt;audio &quot;intense&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;run setTimeout(function () { $.wiki(&#39;&lt;&lt;audio &quot;intense&quot; stop&gt;&gt;&#39;); }, 2000)&gt;&gt;\
 &lt;&lt;run UIBar.stow() &gt;&gt;
 &lt;&lt;script&gt;&gt;
@@ -702,7 +724,9 @@ As you type the code into the box, you realise what you&#39;ve actually been typ
 
 &quot;Stay focused, you&#39;ll get to them.&quot; You give yourself a light smack on the cheek to wake yourself up.
 
-[[Try Another Code.|Refresh the page again.]]</tw-passagedata><tw-passagedata pid="28" name="You stuff yourself into the playhouse" tags="" position="1350,125" size="100,100">&#39;&#39;You&#39;ve crammed yourself into the playhouse.&#39;&#39;
+&lt;&lt;button &quot;Try Another Code&quot; &quot;Refresh the page again.&quot;&gt;&gt;
+[[Refresh the page again.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="You stuff yourself into the playhouse" tags="" position="1350,125" size="100,100">&#39;&#39;You&#39;ve crammed yourself into the playhouse.&#39;&#39;
 
 It&#39;s a tight fit but its the safest bet you think. Now for the waiting game.
 
@@ -737,7 +761,8 @@ You don&#39;t even hesitate. You grab your phone, your student ID, and your keys
 
 &lt;&lt;button &quot;How do we get there?&quot; &quot;How do we get there?&quot;&gt;&gt;
 [[How do we get there?]]
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="How do we get there?" tags="" position="325,1000" size="100,100">You rush into the courtyard, clutching your phone for dear life as you read the Trinity News article.
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="How do we get there?" tags="" position="325,1000" size="100,100">&lt;&lt;audio &quot;countdown&quot; volume 0.7 play&gt;&gt;\
+You rush into the courtyard, clutching your phone for dear life as you read the Trinity News article.
 
 &#39;&#39;&quot;Ticket sales will now commence at 9:30am from 4 areas across campus: The Arts Building, the GMB, the Exam Hall, and the Hamilton Building.&quot;&#39;&#39;
 
@@ -837,7 +862,7 @@ The sooner you&#39;re in a queue, the better... even if it makes you a terrible 
 [[Exam Hall.]]
 &lt;&lt;/button&gt;&gt;
 
-&lt;&lt;button &quot;Hamilton&quot; &quot;Hamilton&quot;&gt;&gt; // 55 minutes
+&lt;&lt;button &quot;Hamilton&quot; &quot;Hamilton.&quot;&gt;&gt; // 55 minutes
 [[Hamilton.]]
 &lt;&lt;/button&gt;&gt; </tw-passagedata><tw-passagedata pid="38" name="Exam Hall." tags="" position="400,1625" size="100,100">&#39;&#39;You decide to join the queue in the Exam Hall.&#39;&#39;
 
@@ -868,7 +893,7 @@ The estimated wait time is &#39;&#39;55 minutes...&#39;&#39;
 [[Wait in line.]]
 &lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Hamilton." tags="" position="525,1625" size="100,100">&#39;&#39;You decide to join the queue in the Hamilton.&#39;&#39;
 
-Despite the treck across campus, it seems like the quietest choice. It takes you 10 minutes to get to the building.
+Despite the trek across campus, it seems like the quietest choice. It takes you 10 minutes to get to the building.
 
 When you arrive, you see the queue running from the vending machines all the way down to the Panoz.
 
@@ -877,7 +902,9 @@ The estimated wait time is &#39;&#39;45 minutes...&#39;&#39;
 
 &lt;&lt;button &quot;Wait in line&quot; &quot;Wait in line.&quot;&gt;&gt;
 [[Wait in line.]]
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Wait in line." tags="" position="325,1775" size="100,100">&lt;&lt;audio &quot;crowd&quot;  play&gt;&gt;\
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Wait in line." tags="" position="325,1775" size="100,100">&lt;&lt;audio &quot;countdown&quot; stop&gt;&gt;\
+&lt;&lt;audio &quot;countdown_end&quot; play&gt;&gt;\
+&lt;&lt;audio &quot;crowd&quot;  play&gt;&gt;\
 
 You join the queue and it slowly begins to dwindle.
 
@@ -976,6 +1003,8 @@ sidebar.style.display=&quot;none&quot;;
 The night of the ball rolls around and the atmosphere is great. 
 &lt;&lt;/type&gt;&gt;
 
+&lt;img src=&quot;img/the_boys.jpg&quot; width=&quot;60%&quot;&gt;
+
 &lt;&lt;if $timeLeft &gt;= 5&gt;&gt;
 	&lt;&lt;timed 3s&gt;&gt;\
 	&lt;&lt;type 40ms&gt;&gt;\
@@ -1005,12 +1034,6 @@ The night of the ball rolls around and the atmosphere is great.
        &lt;&lt;/timed&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;timed 8s&gt;&gt;\
-&lt;&lt;type 40ms&gt;&gt;\
-&lt;img src=&quot;img/the_boys.jpg&quot; width=&quot;80%&quot;&gt;
-&lt;&lt;/type&gt;&gt;
-&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 10s&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;\
@@ -1053,11 +1076,11 @@ You want to be careful, but you still need to enjoy the night.
 [[Go for a drink.]]
 &lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Go for a drink." tags="" position="1525,325" size="100,100">You order medium mango juice, happy to be there, laughing with your friends.
 
-The laughter is cut short, however, when suddenly a guard feels suspicious of all of you guys and starts to come over.
+The laughter is cut short, however, when suddenly a guard feels suspicious you and starts to make their way over.
 
 In shock, you struggle to think.
 
-&#39;&#39;Standing still, the guard asks you to &quot;Show me your ticket please.&quot;&#39;&#39;
+&#39;&#39;Paralysed, the guard asks &quot;Show me your ticket please.&quot;&#39;&#39;
 
 &#39;&#39;What a disaster!&#39;&#39;
 
@@ -1083,6 +1106,76 @@ The guard, looking frustrated, picks you up and throws you out the main gate.
 
 &lt;&lt;button &quot;Try Another Way&quot; &quot;Ask your friends if they have a spare ticket you can buy.&quot;&gt;&gt;
 [[Ask your friends if they have a spare ticket you can buy.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Use a disguise." tags="" position="1075,650" size="100,100">&#39;&#39;You decide to use a disguise to get through one of the three main service entrances on the night.&#39;&#39;
+
+There are three gates: A, B and C. Each gate leads you to a different part of Trinity and is assigned to a different crew. Gate A is dedicated to catering and is where all the food trucks will be moving through, Gate B is where the sound crew and technicians will be operating from, and Gate C is designated to emergency services.
+
+&lt;&lt;button &quot;Catering&quot; &quot;Gate A.&quot;&gt;&gt;
+[[Gate A.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Sound Crew&quot; &quot;Gate B.&quot;&gt;&gt;
+[[Gate B.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Emergency Services&quot; &quot;Gate C.&quot;&gt;&gt;
+[[Gate C.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Gate A." tags="" position="1200,525" size="100,100">&#39;&#39;You decide to disgugise yourself as a caterer.&#39;&#39;
+
+You pop on your best chef&#39;s disguise, pulling all of the stops, and make your way to Gate A. Upon arrival, you&#39;re feeling good. 
+
+All is looking well until you feel a hand on your shoulder. You turn to face a security guard looking fairly concerned by your appearance.
+
+&#39;&#39;Perhaps the fake mustache was a bit much.&#39;&#39;
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Use a disguise.&quot;&gt;&gt;
+[[Use a disguise.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Gate B." tags="" position="1200,650" size="100,100">&#39;&#39;You decide to disguise yourself as Sound Crew.&#39;&#39;
+
+With all of the different sound crews and technicians coming and going through this entrance, there could be very little security to slow them down. It was perfect.
+
+On the night, you arrive at Gate B and are greeted with the manic pacing of sound crew and technicians in and out. Acting with full confidence and donning your best headphones and clipboard, you walk straight through the gate.
+
+&lt;&lt;button &quot;Continue through campus&quot; &quot;Where do you hide.&quot;&gt;&gt;
+[[Where do you hide.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Gate C." tags="" position="1200,775" size="100,100">&#39;&#39;You decide to disguise yourself as the Emergency Services.&#39;&#39;
+
+Seems straight forward enough, just pop on a high-vis jacket and you&#39;re good to go. You make your way to the entrance and pass through without a problem. 
+
+...that is until a security guard comes up to you in a hurry. He points to his colleague who is currently passed out.
+
+&#39;&#39;&quot;Quick, he needs CPR!&quot;, he says.&#39;&#39;
+
+Not wanting to embarass yourself through your lack of First-Aid skills, you simply turn around and walk out.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Use a disguise.&quot;&gt;&gt;
+[[Use a disguise.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Where do you hide." tags="" position="1325,650" size="100,100">Walking through campus, you find yourself in the Rose Garden as several groups of security are seen walking about the area. It&#39;s too soon to head to the stages, there&#39;s too much heat. You spot security heading your way.
+
+&#39;&#39;&quot;I&#39;m not getting caught now.&quot;&#39;&#39;
+
+&#39;&#39;Where do you hide?&#39;&#39;
+
+&lt;&lt;button &quot;Behind a tree&quot; &quot;Behind a tree.&quot;&gt;&gt;
+[[Behind a tree.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;In the bushes&quot; &quot;In the bushes.&quot;&gt;&gt;
+[[In the bushes.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Behind a tree." tags="" position="1450,525" size="100,100">&#39;&#39;You jump behind a tree, making yourself as tall and as slim as possible to hide behind the trunk.&#39;&#39;
+
+Unfortunately, the trees in the Rose Garden are nothing to get excited about. As security is walking by, they notice you, plain as day, sticking out from behind the tree. They promptly grab you and remove you from the premises.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Use a disguise.&quot;&gt;&gt;
+[[Use a disguise.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="In the bushes." tags="" position="1550,650" size="100,100">You dive into a nearby bush, concealing yourself entirely. Security hears some rustling and comes to investigate. Holding your breath and staying completely still, you manage to evade them, remaining totally hidden. 
+
+&#39;&#39;&quot;I&#39;ve nearly made it,&quot; you think.&#39;&#39;
+
+Hearing more security on the way, there&#39;s only one thing to do.
+
+&lt;&lt;button &quot;Make a run for it!!&quot; &quot;Make a run for it!!&quot;&gt;&gt;
+[[Make a run for it!!]]
 &lt;&lt;/button&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
