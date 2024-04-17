@@ -8,8 +8,21 @@ T-Ball Story
   "format": "SugarCube",
   "format-version": "2.36.1",
   "start": "Init",
-  "zoom": 0.3
+  "zoom": 0.6
 }
+
+
+:: Arts Building. {"position":"125,1625","size":"100,100"}
+''You decide to join the queue in the Arts Building.''
+
+The queue wraps all the way through the building, past the Perch and down to the end of the Ed Burke Lecture Hall.
+
+The estimated wait time is ''60 minutes...''
+<<set $timeLeft to $timeLeft - 60>>\
+
+<<button "Wait in line" "Wait in line.">>
+[[Wait in line.]]
+<</button>>
 
 
 :: Ask your friends if they have a spare ticket you can buy. {"position":"950,225","size":"100,100"}
@@ -29,6 +42,19 @@ OR
 
 <<button "Do you hide somewhere on campus and hope you don't get caught" "Do you hide somewhere on campus and hope you don't get caught">>
 [[Do you hide somewhere on campus and hope you don't get caught]]
+<</button>>
+
+
+:: Bus {"position":"250,1125","size":"100,100"}
+''You opt for the bus.''
+
+After all, you can't risk any delays.
+
+You make your way to the bus stop and you aren't waiting long before the 140 arrives, practically empty. 
+<<set $timeLeft to $timeLeft-35 >>
+
+<<button "Continue" "You Arrive.">>
+[[You Arrive.]]
 <</button>>
 
 
@@ -153,6 +179,32 @@ and hope you actually fit!
 TODO
 
 
+:: Exam Hall. {"position":"400,1625","size":"100,100"}
+''You decide to join the queue in the Exam Hall.''
+
+There's not a lot of space in the building, so the queue extends outside as far as the Book of Kells.
+
+The estimated wait time is ''50 minutes...''
+<<set $timeLeft to $timeLeft - 50>>\
+
+<<button "Wait in line" "Wait in line.">>
+[[Wait in line.]]
+<</button>>
+
+
+:: GMB. {"position":"250,1625","size":"100,100"}
+''You decide to join the queue in the GMB.''
+
+The queue spills right out the door onto the cobbles, continuing the whole way up the stairs.
+
+The estimated wait time is ''55 minutes...''
+<<set $timeLeft to $timeLeft - 55>>\
+
+<<button "Wait in line" "Wait in line.">>
+[[Wait in line.]]
+<</button>>
+
+
 :: Give Up. {"position":"875,550","size":"100,100"}
 <<audio "intense" fadeoverto 2 0>>\
 <<run setTimeout(function () { $.wiki('<<audio "intense" stop>>'); }, 2000)>>\
@@ -186,6 +238,21 @@ It's been a long time coming, but after so much blood, sweat, and tears, nothing
 <<button "Refresh the page" "Refresh the page.">>[[Refresh the page.]]<</button>>
 
 
+:: Hamilton. {"position":"525,1625","size":"100,100"}
+''You decide to join the queue in the Hamilton.''
+
+Despite the treck across campus, it seems like the quietest choice. It takes you 10 minutes to get to the building.
+
+When you arrive, you see the queue running from the vending machines all the way down to the Panoz.
+
+The estimated wait time is ''45 minutes...''
+<<set $timeLeft to $timeLeft - 55>>\
+
+<<button "Wait in line" "Wait in line.">>
+[[Wait in line.]]
+<</button>>
+
+
 :: Hide in the play house at the college nursery {"position":"1225,225","size":"100,100"}
 ''The playhouse!''
 
@@ -212,6 +279,26 @@ It's dark outside now and you can hear a crowd in the distance. This is it. The 
 <</button>>
 
 
+:: How do we get there? {"position":"325,1000","size":"100,100"}
+You rush into the courtyard, clutching your phone for dear life as you read the Trinity News article.
+
+''"Ticket sales will now commence at 9:30am from 4 areas across campus: The Arts Building, the GMB, the Exam Hall, and the Hamilton Building."''
+
+''"If I don't get a ticket in the next 90 minutes, it's over," you think.'' <<set $timeLeft to 90>>
+
+''How do you get to campus?''
+
+<<button "Luas to Dawson Street (30 minutes, 25% chance of delay (+10 minutes))" "Luas">>
+[[Luas]] <<set $luasFull to either(true, false, false, false)>> 
+<</button>>
+
+OR
+
+<<button "140 Bus to Dame Street (35 minutes, guarunteed)" "Bus">>
+[[Bus]]
+<</button>>
+
+
 :: In a recycling bin {"position":"1100,100","size":"100,100"}
 ''"This spot has to work" you think.''
 
@@ -232,7 +319,7 @@ They open the bin and find you cowering in the corner.
 <</button>>
 
 
-:: Incorrect Code. {"position":"625,725","size":"100,100"}
+:: Incorrect Code. {"position":"650,700","size":"100,100"}
 ''"Invalid Code", the website alerts.''
 
 "What?!", you exclaim under your breath.
@@ -264,6 +351,42 @@ You've been caught! It was too soon.
 <</button>>
 
 
+:: Keep Going. {"position":"250,1375","size":"100,100"}
+''"Sorry, there's no time," you reply hastily.''
+
+The sooner you're in a queue, the better... even if it makes you a terrible friend.
+
+<<button "Pick a queue" "Pick a queue.">>
+[[Pick a queue.]]
+<</button>>
+
+
+:: Luas {"position":"400,1125","size":"100,100"}
+''You opt for the Luas.''
+
+After all, you need to get to campus ASAP.
+
+The Luas arrives and you breathe a sigh of relief.
+
+<<if $luasFull>>
+<<set $timeLeft to $timeLeft-40>>\
+As you walk up to the doors however, morning commuters have filled each carriage to the brim. 
+
+''"Dammit," you exclaim.'' 
+
+You'll have to wait for the next one.
+<<else>>
+<<set $timeLeft to $timeLeft-30>>\
+You're greeted with a comfortably busy carriage with plenty of seats for the taking.
+
+''Phew.''
+<</if>>
+
+<<button "Continue" "You Arrive.">>
+[[You Arrive.]]
+<</button>>
+
+
 :: Make a run for it!! {"position":"1725,225","size":"100,100"}
 ''You can taste victory!''
 
@@ -284,6 +407,26 @@ OR
 <<button "Run right and hope" "Run right and hope">>
 [[Run right and hope]]
 <</button>>
+
+
+:: Pick a queue. {"position":"325,1500","size":"100,100"}
+''You think about what the best queue to join would be:''
+
+<<button "Arts Building" "Arts Building.">>// 60 minutes
+[[Arts Building.]]
+<</button>>
+
+<<button "GMB" "GMB.">> // 55
+[[GMB.]]
+<</button>>
+
+<<button "Exam Hall" "Exam Hall.">> // 50 minutes
+[[Exam Hall.]]
+<</button>>
+
+<<button "Hamilton" "Hamilton">> // 55 minutes
+[[Hamilton.]]
+<</button>> 
 
 
 :: Refresh the page again. {"position":"475,550","size":"100,100"}
@@ -340,9 +483,15 @@ It's just you vs. ''6,000 other people''...
 <<nobr>>
 <<timed 6s>>
 <<type 40ms>>
+<<if $serversDown>>
+<<button "Refresh the page again" "Server Crash.">>
+[[Server Crash.]] 
+<</button>>
+<<else>>
 <<button "Refresh the page again" "Refresh the page again.">>
 [[Refresh the page again.]] 
 <</button>>
+<</if>>
 <</type>>
 <</timed>>
 <</nobr>>
@@ -413,6 +562,27 @@ You are overcome with excitement and happiness. All that work and time payed off
 <</if>>
 
 
+:: Server Crash. {"position":"200,1000","size":"100,100"}
+''You reload the page to be greeted with... a loading symbol?''
+''You reload again...''
+''...and again.''
+
+Suddenly your phone is buzzing like it wants to throw itself off your desk. Your read the notifications:
+
+''"Is Ticketmaster down for anyone else??"''
+''"lads why can i not get onto ticketmaster?"''
+
+Finally a headline from Trinity News reads:
+
+''"HAVOC as Ticketmaster crashes during T-Ball sales. Ticket sales to be moved in person per contingency plan."''
+
+You don't even hesitate. You grab your phone, your student ID, and your keys and you rush out the door of your accomodation..
+
+<<button "How do we get there?" "How do we get there?">>
+[[How do we get there?]]
+<</button>>
+
+
 :: Start {"position":"100,550","size":"100,100"}
 <<audio "ticking" loop play>>
 <<timed 2s>><<type 40ms>>''...February 28th 202X''<</type>><</timed>>
@@ -464,6 +634,8 @@ OR
     {text: $fakeString, passage: "Incorrect Code."}
 ]>>
 
+<<set $serversDown to either(true, false, false)>>
+
 <<set $passages = $passages.shuffle()>>
 
 <<cacheaudio "ticking" "aud/ticking.wav">>
@@ -477,7 +649,7 @@ OR
 <<cacheaudio "holy" "aud/Arcadia.mp3">>
 
 
-:: TB4LLT1X {"position":"375,725","size":"100,100"}
+:: TB4LLT1X {"position":"400,700","size":"100,100"}
 ''"TB4LLT1-"''
 
 "THAT'S NOT THE CODE", you think to yourself. 
@@ -548,11 +720,34 @@ The night of T-Ball rolls around and the energy is immense. With so many great a
             <</if>><</if>><</if>><<if visited("The Persistence Ending.") <= 3>><<button "Continue" "The Persistence Ending.">><</button>><</if>>
 
 
-:: Try to steal a ticket. {"position":"925,875","size":"100,100"}
+:: The Time Management Ending. {"position":"325,1900","size":"100,100"}
+The night of the ball rolls around and the atmosphere is great. 
+
+<<if $timeLeft >= 5>>
+	You and Charlie couldn't be happier. Not only do you get to experience the joy of The Wolfe Tones, but you get to do it with your mate. What a night this is.
+<<else>>
+	Sadly, it's not the same without Charlie here.
+    
+    <<if visited("Wait.") > 0 >>
+    	You know he wanted you to go, but you just wish there was more you could've done to get him here. Was there another way?
+        
+    <<else>>
+    	He knows you've been waiting for this your whole life, but it hasn't been the same since you ditched him to get your ticket. You think about how you'll make it up to him, feeling regretful for what you did.    
+    <</if>>
+<</if>>
+
+''You've achieved The Time Management Ending.''
+
+<<button "Play Again." Restart>>
+            [[Play Again.|Restart]]
+<</button>>
+
+
+:: Try to steal a ticket. {"position":"900,675","size":"100,100"}
 TODO
 
 
-:: WLFT0N3 {"position":"500,725","size":"100,100"}
+:: WLFT0N3 {"position":"525,700","size":"100,100"}
 ''"WLFT0N-"''
 
 As you type the code into the box, you realise what you've actually been typing.
@@ -560,6 +755,131 @@ As you type the code into the box, you realise what you've actually been typing.
 "Stay focused, you'll get to them." You give yourself a light smack on the cheek to wake yourself up.
 
 [[Try Another Code.|Refresh the page again.]]
+
+
+:: Wait in line. {"position":"325,1775","size":"100,100"}
+You join the queue and it slowly begins to dwindle.
+
+You move closer...
+
+...and closer...
+
+...and closer...
+
+...until!
+
+<<if visited("Wait.") > 0>>
+	<<if $timeLeft >= 0>>
+   		<<if $timeLeft >= 5>>
+        ''"Hiya! How many tickets?" the girl at the desk asks.''
+        
+        ''"Two please," you ask.''
+        
+        You did it. Not only did you make it, but you got a ticket for both you AND Charlie. What a success this was.
+        <<button "Go to the ball" "The Time Management Ending.">>
+        [[The Time Management Ending.]]
+        <</button>>
+        <<else>>
+        ''"You're in luck, just one ticket left!" the girl at the desk tells you.''
+       	
+        You turn to Charlie and he's already nodding in approval.
+        
+        ''"It's all good, there's always next year," he assures you.''
+        
+        You turn back to the girl at the desk, buy your ticket, and leave to enjoy your bittersweet victory.
+        <<button "Go to the ball" "The Time Management Ending.">>
+        [[The Time Management Ending.]]
+        <</button>>
+        <</if>>
+    <<else>>
+    	''"To anyone still in the queue, tickets have just sold out!" the girl at the desk announces."''
+        
+       	''"NOOOOOO!"'' you scream.''
+        
+        If you'd only been 5 minutes quicker.
+        
+        The exhaustion has caught up to Charlie and you. Neither of you can even think about what you'll do next. You return home to your beds.
+        
+        <<button "Try Again." Restart>>
+            [[Restart]]
+		<</button>>
+    <</if>>
+<<else>>
+	<<if $timeLeft >= 0>>
+   		<<if $timeLeft >= 5>>
+        ''"Hiya! How many tickets?" the girl at the desk asks.''
+        
+        ''"Two please," you ask.''
+        
+        You might have ditched Charlie, but you weren't going to let him down. You grab the two tickets and ring him to tell him the good news. You're actually going to T-Ball!
+        <<button "Go to the ball" "The Time Management Ending.">>
+        [[The Time Management Ending.]]
+        <</button>>
+        <<else>>
+        ''"You're in luck, just one ticket left!" the girl at the desk tells you.''
+       	
+        You think about Charlie. You know he wouldn't be happy, but this is your dream. Who is he to stop you?
+        
+        ''You buy the ticket.''
+        
+        ''You text Charlie to tell him the news. He leaves you on read.''
+        <<button "Go to the ball" "The Time Management Ending.">>
+        [[The Time Management Ending.]]
+        <</button>>
+        <</if>>
+    <<else>>
+    	''"To anyone still in the queue, tickets have just sold out!" the girl at the desk announces."''
+        
+       	''"NOOOOOO!"'' you scream.''
+        
+        If you'd only been 5 minutes quicker.
+        
+        The exhaustion has caught up to you. You can't even think about what you'll do next, not to mention facing Charlie after this. You return home to your bed.
+        
+        <<button "Try Again." Restart>>
+            [[Restart]]
+		<</button>>
+    <</if>>
+<</if>>
+
+
+:: Wait. {"position":"400,1375","size":"100,100"}
+''You decide to wait.'' <<set $timeLeft to $timeLeft-5>> 
+
+Charlie's been with you through thick and thin. It's the least you can do.
+
+Charlie arrives 5 minutes later, red in the face and out of breath.
+
+''"Right, let's do this", he says.''
+
+<<button "Pick a queue" "Pick a queue.">>
+[[Pick a queue.]]
+<</button>>
+
+
+
+
+
+:: You Arrive. {"position":"325,1250","size":"100,100"}
+As you finish your journey, you hop off onto the street and start sprinting towards campus. 
+
+You check your phone to see a message from your friend Charlie:
+
+''"I'm running late, will you wait for me??"''
+
+You're already cutting it close and you can't miss out on these tickets.
+
+''What will you do?''
+
+<<button "Wait for Charlie (5 minutes)" "Wait.">>
+[[Wait.]]
+<</button>>
+
+<<button "Keep Going" "Keep Going.">>
+[[Keep Going.]]
+<</button>>
+
+
 
 
 :: You stuff yourself into the playhouse {"position":"1350,225","size":"100,100"}
