@@ -7,8 +7,13 @@ T-Ball Story
   "ifid": "3E58F2C5-53EE-4DAD-8CA8-A7DD9F3A1982",
   "format": "SugarCube",
   "format-version": "2.36.1",
+<<<<<<< HEAD
+  "start": "Server Crash.",
+  "zoom": 0.3
+=======
   "start": "Init",
   "zoom": 0.6
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 }
 
 
@@ -46,6 +51,10 @@ OR
 
 
 :: Bus {"position":"250,1125","size":"100,100"}
+<<<<<<< HEAD
+<<audio "bus"  play>>\
+=======
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 ''You opt for the bus.''
 
 After all, you can't risk any delays.
@@ -58,7 +67,11 @@ You make your way to the bus stop and you aren't waiting long before the 140 arr
 <</button>>
 
 
+<<<<<<< HEAD
+:: Chance getting out to use the bathroom {"position":"1475,0","size":"100,100"}
+=======
 :: Chance getting out to use the bathroom {"position":"1475,100","size":"100,100"}
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 ''The urge was too strong! You couldn't wait.''
 
 You jump out and run around the corner. But just as you turn the corner there are 3 men standing there.
@@ -68,6 +81,19 @@ You jump out and run around the corner. But just as you turn the corner there ar
 <<button "Try Another Way" "Do you hide somewhere on campus and hope you don't get caught">>
 [[Do you hide somewhere on campus and hope you don't get caught]]
 <</button>>
+
+
+:: Climb. {"position":"1200,250","size":"100,100"}
+''The plan was simple...''
+
+You scouted out the college the night before, looking for ways to get in. You came across a fence near the rugby pitch that was just out of the line of sight of security.
+
+''You try to climb the fence to see how doable it is and you make it! You're in!''
+
+The night of the ball rolls around and you return to the fence. Once again you use all your effort to pull yourself up over the fence and you land square on the ground inside with not a security guard in sight.
+
+''You decide to go and [[meet your friends.|Meet your friends.]]''
+
 
 
 :: Correct Code. {"position":"600,550","size":"100,100"}
@@ -147,7 +173,21 @@ You watch with anticipation as you crawl nearer the front of the queue.
 <</if>>
 
 
-:: Do you hide somewhere on campus and hope you don't get caught {"position":"1100,225","size":"100,100"}
+:: Crowd. {"position":"1200,400","size":"100,100"}
+''The plan was simple.''
+
+You'd blend in, plain and simple. With a big enough group you'd have no trouble getting through the main gate.
+
+The night of the ball rolls around and you wait near the main entrance for a big enough group to come by. You spot a group of about 15 friends coming in together, clearly a little bit tipsy from pre-drinks. With your ball atire donned, you walk closely behind the group. As security is distracted trying to check each and every one of the drunken friends, you pick your moment to slip right through the gate. 
+
+''"I can't believe that worked," you think.''
+
+Me neither.
+
+''Now inside, you decide to try and [[find your friends.|Meet your friends.]]''
+
+
+:: Do you hide somewhere on campus and hope you don't get caught {"position":"1100,125","size":"100,100"}
 It's the only rational choice. You have to hide on campus.
 
 You get your suit on and ready your supplies.
@@ -175,8 +215,46 @@ and hope you actually fit!
 <</nobr>>
 
 
-:: Do you sneak in on the night {"position":"1100,500","size":"100,100"}
-TODO
+:: Do you sneak in on the night {"position":"1075,325","size":"100,100"}
+You really want to go to this ball. Everyone you know managed to get a ticket and they've been talking about it ever since. 
+
+''You decide to sneak in.''
+
+''What's the plan?''
+
+<<button "Climb over a fence" "Climb.">>
+[[Climb.]]
+<</button>>
+
+<<button "Sneak in through the crowd" "Crowd.">>
+[[Crowd.]]
+<</button>>
+
+
+:: Exam Hall. {"position":"400,1625","size":"100,100"}
+''You decide to join the queue in the Exam Hall.''
+
+There's not a lot of space in the building, so the queue extends outside as far as the Book of Kells.
+
+The estimated wait time is ''50 minutes...''
+<<set $timeLeft to $timeLeft - 50>>\
+
+<<button "Wait in line" "Wait in line.">>
+[[Wait in line.]]
+<</button>>
+
+
+:: GMB. {"position":"250,1625","size":"100,100"}
+''You decide to join the queue in the GMB.''
+
+The queue spills right out the door onto the cobbles, continuing the whole way up the stairs.
+
+The estimated wait time is ''55 minutes...''
+<<set $timeLeft to $timeLeft - 55>>\
+
+<<button "Wait in line" "Wait in line.">>
+[[Wait in line.]]
+<</button>>
 
 
 :: Exam Hall. {"position":"400,1625","size":"100,100"}
@@ -226,6 +304,27 @@ But you weren't giving up for good just yet.
 
 
 
+:: Go for a drink. {"position":"1525,325","size":"100,100"}
+You order medium mango juice, happy to be there, laughing with your friends.
+
+The laughter is cut short, however, when suddenly a guard feels suspicious of all of you guys and starts to come over.
+
+In shock, you struggle to think.
+
+''Standing still, the guard asks you to "Show me your ticket please."''
+
+''What a disaster!''
+
+<<button "Make a run for it!" "Make a run for it!!">>
+[[Make a run for it!!]] 
+<</button>>
+
+<<button "Tell the truth" "Tell the truth.">>
+[[Tell the truth.]]
+<</button>>
+
+
+
 :: Go to the website. {"position":"225,550","size":"100,100"}
 <img src="img/ticketmaster.png" width="50%">
 ''You open the Ticketmaster tab to be faced with the waiting room.''
@@ -253,7 +352,11 @@ The estimated wait time is ''45 minutes...''
 <</button>>
 
 
+<<<<<<< HEAD
+:: Hide in the play house at the college nursery {"position":"1225,125","size":"100,100"}
+=======
 :: Hide in the play house at the college nursery {"position":"1225,225","size":"100,100"}
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 ''The playhouse!''
 
 Of course why didn't anyone think of this before.
@@ -265,7 +368,7 @@ The plan is fool-proof. Nobodys going to check over here.
 <</button>>
 
 
-:: Hold it. I can wait just a bit longer!! {"position":"1600,225","size":"100,100"}
+:: Hold it. I can wait just a bit longer!! {"position":"1600,125","size":"100,100"}
 ''You perservere.''
 
 If you've waited this long you can wait a bit longer.
@@ -299,7 +402,11 @@ OR
 <</button>>
 
 
+<<<<<<< HEAD
+:: In a recycling bin {"position":"1100,0","size":"100,100"}
+=======
 :: In a recycling bin {"position":"1100,100","size":"100,100"}
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 ''"This spot has to work" you think.''
 
 No one's finding you here. Who checks the bins the night of Trinity Ball?
@@ -332,7 +439,7 @@ They open the bin and find you cowering in the corner.
 <<button "Begin the Story" "Start">>[[Start]]<</button>>
 
 
-:: It's late enough, you can hear people so you get out {"position":"1350,100","size":"100,100"}
+:: It's late enough, you can hear people so you get out {"position":"1350,0","size":"100,100"}
 ''You crawl your way out of the playhouse.''
 
 The coast seems to be clear!
@@ -353,6 +460,8 @@ You've been caught! It was too soon.
 
 :: Keep Going. {"position":"250,1375","size":"100,100"}
 ''"Sorry, there's no time," you reply hastily.''
+<<<<<<< HEAD
+=======
 
 The sooner you're in a queue, the better... even if it makes you a terrible friend.
 
@@ -389,8 +498,44 @@ You're greeted with a comfortably busy carriage with plenty of seats for the tak
 
 :: Make a run for it!! {"position":"1725,225","size":"100,100"}
 ''You can taste victory!''
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 
-After all that work theres only a few metres between you and the night of your life.
+The sooner you're in a queue, the better... even if it makes you a terrible friend.
+
+<<button "Pick a queue" "Pick a queue.">>
+[[Pick a queue.]]
+<</button>>
+
+
+:: Luas {"position":"400,1125","size":"100,100"}
+<<audio "luas" play>>\
+''You opt for the Luas.''
+
+After all, you need to get to campus ASAP.
+
+The Luas arrives and you breathe a sigh of relief.
+
+<<if $luasFull>><<set $timeLeft to $timeLeft-40>>\
+As you walk up to the doors however, morning commuters have filled each carriage to the brim. 
+
+''"Dammit," you exclaim.'' 
+
+You'll have to wait for the next one.
+<<else>><<set $timeLeft to $timeLeft-30>>\
+You're greeted with a comfortably busy carriage with plenty of seats for the taking.
+
+''Phew.''
+<</if>>
+
+<<button "Continue" "You Arrive.">>
+[[You Arrive.]]
+<</button>>
+
+
+:: Make a run for it!! {"position":"1725,125","size":"100,100"}
+''You won't get caught now!''
+
+Just run a little further and you'll be home free.
 
 ''"One last effort" you think to yourself''
 
@@ -409,6 +554,21 @@ OR
 <</button>>
 
 
+<<<<<<< HEAD
+:: Meet your friends. {"position":"1325,325","size":"100,100"}
+Searching through the crowds, you find your friends dancing to one side. You walk to join them but notice security frantically on the lookout for someone. You need to lay low in case they ask you for your ticket.
+
+''"Let's go get a drink!" your friend Charlie suggests.''
+
+You want to be careful, but you still need to enjoy the night.
+
+<<button "Go for a drink" "Go for a drink.">>
+[[Go for a drink.]]
+<</button>>
+
+
+=======
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 :: Pick a queue. {"position":"325,1500","size":"100,100"}
 ''You think about what the best queue to join would be:''
 
@@ -503,20 +663,20 @@ state.restart();
 <<endscript>>
 
 
-:: Run left and hope {"position":"1725,350","size":"100,100"}
+:: Run left and hope {"position":"1725,250","size":"100,100"}
 ''You've ran straight into the guards!!!!''
 
 All that work for nothing.
 
 ''"I guess I'll go get food and go home," you say.''
 
-<<button "Try Another Way" "Do you hide somewhere on campus and hope you don't get caught">>
-[[Do you hide somewhere on campus and hope you don't get caught]]
+<<button "Try Another Way" "Ask your friends if they have a spare ticket you can buy.">>
+[[Ask your friends if they have a spare ticket you can buy.]]
 <</button>>
 
 
-:: Run right and hope {"position":"1725,100","size":"100,100"}
-And with your last bit of effort you squeeze through the fence.
+:: Run right and hope {"position":"1725,0","size":"100,100"}
+And with your last bit of effort you're home free.
 
 ''"I've finally made it!!!"''
 
@@ -567,7 +727,11 @@ You are overcome with excitement and happiness. All that work and time payed off
 ''You reload again...''
 ''...and again.''
 
+<<<<<<< HEAD
+Suddenly your phone is buzzing like it wants to throw itself off your desk. You read the notifications:
+=======
 Suddenly your phone is buzzing like it wants to throw itself off your desk. Your read the notifications:
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 
 ''"Is Ticketmaster down for anyone else??"''
 ''"lads why can i not get onto ticketmaster?"''
@@ -595,7 +759,7 @@ You don't even hesitate. You grab your phone, your student ID, and your keys and
 <<timed 14s>><<type 40ms>><<button "Go to the website" "Go to the website.">>[[Go to the website.]]<</button>><</type>><</timed>>
 
 
-:: Stay in the playhouse for another while longer {"position":"1475,225","size":"100,100"}
+:: Stay in the playhouse for another while longer {"position":"1475,125","size":"100,100"}
 You don't want to chance getting caught so you stay there a little while longer. Your phones dead and you don't know where your friends are.
 
 The sudden urge for the bathroom comes after all them beers you had trying to pass the time.
@@ -644,7 +808,18 @@ OR
 <<cacheaudio "horn" "aud/horn.mp3">>
 <!-- audio from zapsplat.com -->
 
+<<cacheaudio "bus" "aud/bus.wav">>
+<!-- audio from freesound.org -->
+
+<<cacheaudio "luas" "aud/luas.wav">>
+<!-- audio from freesound.org -->
+
+<<cacheaudio "crowd" "aud/crowd.wav">>
+<!-- audio from freesound.org -->
+
 <<cacheaudio "intense" "aud/Good Day to Die.mp3">>
+
+<<cacheaudio "tunes" "aud/tunes.mp3">>
 
 <<cacheaudio "holy" "aud/Arcadia.mp3">>
 
@@ -657,6 +832,25 @@ OR
 "If it was that easy, what would even be the point??"
 
 [[Try Another Code.|Refresh the page again.]]
+
+
+:: Tell the truth. {"position":"1725,375","size":"100,100"}
+You stand there in silence and turn a bit pale.
+The guard, now more suspicious, asks again. 
+
+''"I said show me your ticket!"''
+
+You decide to tell the truth.
+   
+''"But I have no ticket, sir".''
+
+The guard, looking frustrated, picks you up and throws you out the main gate.
+
+''You've been kicked out!''
+
+<<button "Try Another Way" "Ask your friends if they have a spare ticket you can buy.">>
+[[Ask your friends if they have a spare ticket you can buy.]]
+<</button>>
 
 
 :: The Jinx Ending. {"position":"500,350","size":"100,100"}
@@ -721,6 +915,75 @@ The night of T-Ball rolls around and the energy is immense. With so many great a
 
 
 :: The Time Management Ending. {"position":"325,1900","size":"100,100"}
+<<<<<<< HEAD
+<<audio "crowd" fadeoverto 2 0>>\
+<<run setTimeout(function () { $.wiki('<<audio "crowd" stop>>'); }, 2000)>>\
+<<audio "tunes" volume 0 play>>\
+<<audio "tunes" fadeoverto 5 50>>\
+<<run UIBar.stow() >>
+<<script>>
+document.body.style.backgroundColor = "#203354";
+document.body.style.color = "white";
+var sidebar = document.getElementById("ui-bar");
+sidebar.style.display="none";
+<</script>>
+<<type 40ms>>\
+The night of the ball rolls around and the atmosphere is great. 
+<</type>>
+
+<<if $timeLeft >= 5>>
+	<<timed 3s>>\
+	<<type 40ms>>\
+	You and Charlie couldn't be happier. Not only do you get to experience the joy of The Wolfe Tones, but you get to do it with your mate. What a night this is.
+	<</type>>
+    <</timed>>
+    
+<<else>>
+	<<timed 3s>>\
+	<<type 40ms>>\
+	Sadly, it's not the same without Charlie here.
+    <</type>>
+    <</timed>>
+    
+    <<if visited("Wait.") > 0 >>
+      <<timed 6s>>\
+      <<type 40ms>>\
+    	You know he wanted you to go, but you just wish there was more you could've done to get him here. Was there another way?
+       <</type>>
+       <</timed>>
+        
+    <<else>>
+        <<timed 6s>>\
+      <<type 40ms>>\
+    	He knows you've been waiting for this your whole life, but it hasn't been the same since you ditched him to get your ticket. You think about how you'll make it up to him, feeling regretful for what you did.
+        <</type>>
+       <</timed>>
+    <</if>>
+<</if>>
+
+<<timed 8s>>\
+<<type 40ms>>\
+<img src="img/the_boys.jpg" width="80%">
+<</type>>
+<</timed>>
+
+<<timed 10s>>\
+<<type 40ms>>\
+''You've achieved The Time Management Ending.''
+<</type>>
+<</timed>>
+
+<<timed 12s>>\
+<<type 40ms>>\
+<<button "Play Again." Restart>>
+            [[Play Again.|Restart]]
+<</button>>
+<</type>>
+<</timed>>
+
+
+:: Try to steal a ticket. {"position":"875,675","size":"100,100"}
+=======
 The night of the ball rolls around and the atmosphere is great. 
 
 <<if $timeLeft >= 5>>
@@ -744,6 +1007,7 @@ The night of the ball rolls around and the atmosphere is great.
 
 
 :: Try to steal a ticket. {"position":"900,675","size":"100,100"}
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 TODO
 
 
@@ -758,6 +1022,11 @@ As you type the code into the box, you realise what you've actually been typing.
 
 
 :: Wait in line. {"position":"325,1775","size":"100,100"}
+<<<<<<< HEAD
+<<audio "crowd"  play>>\
+
+=======
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 You join the queue and it slowly begins to dwindle.
 
 You move closer...
@@ -768,9 +1037,15 @@ You move closer...
 
 ...until!
 
+<<<<<<< HEAD
+<<if visited("Wait.") > 0>>\
+	<<if $timeLeft >= 0>>\
+   		<<if $timeLeft >= 5>>\
+=======
 <<if visited("Wait.") > 0>>
 	<<if $timeLeft >= 0>>
    		<<if $timeLeft >= 5>>
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
         ''"Hiya! How many tickets?" the girl at the desk asks.''
         
         ''"Two please," you ask.''
@@ -790,11 +1065,19 @@ You move closer...
         <<button "Go to the ball" "The Time Management Ending.">>
         [[The Time Management Ending.]]
         <</button>>
+<<<<<<< HEAD
+        <</if>>\
+    <<else>>\
+    	''"To anyone still in the queue, tickets have just sold out!" the girl at the desk announces."''
+        
+       	''"NOOOOOO!" you scream.''
+=======
         <</if>>
     <<else>>
     	''"To anyone still in the queue, tickets have just sold out!" the girl at the desk announces."''
         
        	''"NOOOOOO!"'' you scream.''
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
         
         If you'd only been 5 minutes quicker.
         
@@ -803,10 +1086,17 @@ You move closer...
         <<button "Try Again." Restart>>
             [[Restart]]
 		<</button>>
+<<<<<<< HEAD
+    <</if>>\
+<<else>>\
+	<<if $timeLeft >= 0>>\
+   		<<if $timeLeft >= 5>>\
+=======
     <</if>>
 <<else>>
 	<<if $timeLeft >= 0>>
    		<<if $timeLeft >= 5>>
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
         ''"Hiya! How many tickets?" the girl at the desk asks.''
         
         ''"Two please," you ask.''
@@ -861,6 +1151,11 @@ Charlie arrives 5 minutes later, red in the face and out of breath.
 
 
 :: You Arrive. {"position":"325,1250","size":"100,100"}
+<<<<<<< HEAD
+<<audio "bus" stop>>\
+<<audio "luas" stop>>\
+=======
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 As you finish your journey, you hop off onto the street and start sprinting towards campus. 
 
 You check your phone to see a message from your friend Charlie:
@@ -871,7 +1166,11 @@ You're already cutting it close and you can't miss out on these tickets.
 
 ''What will you do?''
 
+<<<<<<< HEAD
+<<button "Wait for Charlie (+5 minutes)" "Wait.">>
+=======
 <<button "Wait for Charlie (5 minutes)" "Wait.">>
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 [[Wait.]]
 <</button>>
 
@@ -882,7 +1181,11 @@ You're already cutting it close and you can't miss out on these tickets.
 
 
 
+<<<<<<< HEAD
+:: You stuff yourself into the playhouse {"position":"1350,125","size":"100,100"}
+=======
 :: You stuff yourself into the playhouse {"position":"1350,225","size":"100,100"}
+>>>>>>> ab251fb94e72b05a2a48a23cc2f5ba77d9cb34a3
 ''You've crammed yourself into the playhouse.''
 
 It's a tight fit but its the safest bet you think. Now for the waiting game.
