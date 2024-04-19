@@ -614,6 +614,8 @@ You are overcome with excitement and happiness. All that work and time payed off
 
 &lt;&lt;set $serversDown to either(true, false, false)&gt;&gt;
 
+&lt;&lt;set $visits to 0&gt;&gt;
+
 &lt;&lt;set $passages = $passages.shuffle()&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;ticking&quot; &quot;aud/ticking.wav&quot;&gt;&gt;
@@ -744,7 +746,15 @@ OR
 
 &lt;&lt;button &quot;Stay in the playhouse for another while longer&quot; &quot;Stay in the playhouse for another while longer&quot;&gt;&gt;
 [[Stay in the playhouse for another while longer]]
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Try to steal a ticket." tags="" position="875,675" size="100,100">TODO</tw-passagedata><tw-passagedata pid="30" name="Server Crash." tags="" position="200,1000" size="100,100">&#39;&#39;You reload the page to be greeted with... a loading symbol?&#39;&#39;
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Try to steal a ticket." tags="" position="900,800" size="100,100">&#39;&#39;You know what has to be done: You have to steal a ticket!&#39;&#39; &lt;&lt;set $visits to 0&gt;&gt;
+
+You&#39;re out of options and you&#39;re not just gonna miss T-Ball.
+
+If you are going to steal a ticket, it has to be today while everyone has their ticket with them, otherwise you will miss the opportunity and they will bring their tickets home.
+
+&lt;&lt;button &quot;Start Searching&quot; &quot;Search.&quot;&gt;&gt;
+[[Search.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Server Crash." tags="" position="200,1000" size="100,100">&#39;&#39;You reload the page to be greeted with... a loading symbol?&#39;&#39;
 &#39;&#39;You reload again...&#39;&#39;
 &#39;&#39;...and again.&#39;&#39;
 
@@ -1176,6 +1186,286 @@ Hearing more security on the way, there&#39;s only one thing to do.
 
 &lt;&lt;button &quot;Make a run for it!!&quot; &quot;Make a run for it!!&quot;&gt;&gt;
 [[Make a run for it!!]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Search." tags="" position="900,1100" size="100,100">&#39;&#39;Where do you look?&#39;&#39;
+
+&lt;&lt;button &quot;Arts Building&quot; &quot;Search the Arts Building.&quot;&gt;&gt;
+[[Search the Arts Building.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Buttery&quot; &quot;Search the Buttery.&quot;&gt;&gt;
+[[Search the Buttery.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Berkley Library&quot; &quot;Search the Library.&quot;&gt;&gt;
+[[Search the Library.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Pavilion&quot; &quot;Search the Pavilion.&quot;&gt;&gt;
+[[Search the Pavilion.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Hamilton&quot; &quot;Search the Hamilton.&quot;&gt;&gt;
+[[Search the Hamilton.]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Search the Arts Building." tags="" position="1050,1550" size="100,100">&lt;&lt;set $visits to $visits+1&gt;&gt;\
+&lt;&lt;if $visits&gt;9&gt;&gt;\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn&#39;t bring their tickets back again.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Try to steal a ticket.&quot;&gt;&gt;
+[[Try to steal a ticket.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;elseif $visits%3==0&gt;&gt;
+Looks like someone was using the printer. You take a closer look and see a T-Ball 
+ticket!! Luckily, the owner seems to have passed out, probably from waiting too long.
+
+&lt;&lt;button &quot;Lucky Me&quot; &quot;Lucky Me.&quot;&gt;&gt;
+[[Lucky Me.]]
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+Pacing around the Arts Building, all you can see are your friends, who are obviously off limits.
+
+I mean, you wouldn&#39;t steal THEIR tickets, right?? You aren&#39;t some heartless monster.
+
+&lt;&lt;button &quot;Search the Berkley&quot; &quot;Search the Library.&quot;&gt;&gt;
+[[Search the Library.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Pavilion&quot; &quot;Search the Pavilion.&quot;&gt;&gt;
+[[Search the Pavilion.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;if $visits &lt; 6&gt;&gt;\
+&lt;&lt;button &quot;Search the Buttery&quot; &quot;Search the Buttery.&quot;&gt;&gt;
+[[Search the Buttery.]] 
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Search the Buttery." tags="" position="750,1550" size="100,100">&lt;&lt;set $visits to $visits+1&gt;&gt;\
+&lt;&lt;if $visits&gt;9&gt;&gt;\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn&#39;t bring their tickets back again.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Try to steal a ticket.&quot;&gt;&gt;
+[[Try to steal a ticket.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;else&gt;&gt;\
+You had a look around, and didn&#39;t notice anyone with a ticket on their table. Maybe you should come back later.
+
+&lt;&lt;button &quot;Search the Hamilton&quot; &quot;Search the Hamilton.&quot;&gt;&gt;
+[[Search the Hamilton.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Berkley&quot; &quot;Search the Library.&quot;&gt;&gt;
+[[Search the Library.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Arts Building&quot; &quot;Search the Arts Building.&quot;&gt;&gt;
+[[Search the Arts Building.]]
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Search the Library." tags="" position="900,1400" size="100,100">&lt;&lt;set $visits to $visits+1&gt;&gt;
+&lt;&lt;if $visits&gt;9&gt;&gt;
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn&#39;t bring their tickets back again.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Try to steal a ticket.&quot;&gt;&gt;
+[[Try to steal a ticket.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;else&gt;&gt;
+You think to yourself it&#39;s better not to check the Kinsella library. Wayyy too open and too many floors. You spot some tickets in the Usher library but there&#39;s too many eyes around.
+
+&lt;&lt;if $visits%2==0&gt;&gt;
+Despite the place being so crowded, you finally find a victim on the first floor of the Berkeley.
+
+&lt;&lt;button &quot;Get Closer&quot; &quot;The Unnoticed Bandit Ending.&quot;&gt;&gt;
+[[The Unnoticed Bandit Ending.]] 
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Today is not your lucky day. Plus, you feel like you went up one flight of stairs too many…
+
+&lt;&lt;button &quot;Search the Hamilton&quot; &quot;Search the Hamilton.&quot;&gt;&gt;
+[[Search the Hamilton.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Pavilion&quot; &quot;Search the Pavilion.&quot;&gt;&gt;
+[[Search the Pavilion.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Arts Building&quot; &quot;Search the Arts Building.&quot;&gt;&gt;
+[[Search the Arts Building.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;if $visits &lt; 6&gt;&gt;
+&lt;&lt;button &quot;Search the Buttery&quot; &quot;Search the Buttery.&quot;&gt;&gt;
+[[Search the Buttery.]]
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="Search the Pavilion." tags="" position="1050,1250" size="100,100">&lt;&lt;set $visits to $visits+1&gt;&gt;\
+&lt;&lt;if $visits&gt;9&gt;&gt;\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn&#39;t bring their tickets back again.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Try to steal a ticket.&quot;&gt;&gt;
+[[Try to steal a ticket.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;elseif $visits &gt; 3&gt;&gt;\
+As you are walking up the steps, you recognise someone sitting outside….
+
+It&#39;s the coworker that got you fired last summer for something he did!
+
+…And he just so happens to have a ticket poking out of his shirt pocket.
+
+&lt;&lt;button &quot;Fight him&quot; &quot;Fight him.&quot;&gt;&gt;
+[[Fight him.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;else&gt;&gt;\
+As you are walking towards the Pavilion, you can see from afar that it&#39;s definitely open. However it seems like nobody is around yet. Better look elsewhere first.
+
+&lt;&lt;button &quot;Search the Hamilton&quot; &quot;Search the Hamilton.&quot;&gt;&gt;
+[[Search the Hamilton.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Berkley&quot; &quot;Search the Library.&quot;&gt;&gt;
+[[Search the Library.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Arts Building&quot; &quot;Search the Arts Building.&quot;&gt;&gt;
+[[Search the Arts Building.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Search the Hamilton." tags="" position="750,1250" size="100,100">&lt;&lt;set $visits to $visits+1&gt;&gt;\
+&lt;&lt;if $visits&gt;9&gt;&gt;\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn&#39;t bring their tickets back again.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Try to steal a ticket.&quot;&gt;&gt;
+[[Try to steal a ticket.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;elseif $visits%4==0&gt;&gt;\
+Looks like someone was using the printer. You take a closer look and see a T-Ball 
+ticket!! Luckily, the owner seems to have passed out, probably from waiting too long.
+
+&lt;&lt;button &quot;Don&#39;t mind if I do&quot; &quot;The Real Ending.&quot;&gt;&gt;
+[[The Too Easy Ending.]]
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Searching the Hamilton head to toe, you find nothing, not even in the library.
+
+&lt;&lt;button &quot;Search the Berkley&quot; &quot;Search the Library.&quot;&gt;&gt;
+[[Search the Library.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Search the Pavilion&quot; &quot;Search the Pavilion.&quot;&gt;&gt;
+[[Search the Pavilion.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;if $visits &lt; 6&gt;&gt;\
+&lt;&lt;button &quot;Search the Buttery&quot; &quot;Search the Buttery.&quot;&gt;&gt;
+[[Search the Buttery.]] 
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="The Too Easy Ending." tags="" position="600,1100" size="100,100">You slip away unnoticed, the stolen T-Ball ticket at long last in your possession. You&#39;re ready to enjoy yourself to the fullest… but there&#39;s just one problem: a slight feeling of guilt that looms over you.
+
+Knowing that it&#39;s too late to turn back now, you settle in to your new life of crime.
+
+&#39;&#39;You&#39;ve achieved the Too Easy Ending.&#39;&#39;&#39;
+
+&lt;&lt;button &quot;Play Again.&quot; Restart&gt;&gt;
+            [[Restart]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Fight him." tags="" position="1275,1250" size="100,100">&#39;&#39;You run towards him and he notices your presence. &#39;&#39; &lt;&lt;set $guarded to false&gt;&gt;
+
+He stands up from his seat, and looks you in the eye. The feeling of resentment emits from your very being. You both know this isn&#39;t going to end well for one of you.
+
+&lt;&lt;button &quot;Try your hand at the crane stance from Karate Kid&quot; &quot;Crane.&quot;&gt;&gt;
+[[Crane.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Assume a boxer’s guard with your fists close to your chest&quot; &quot;Guard.&quot;&gt;&gt;
+[[Guard.]]
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Hop lightly with your fingers outstretched&quot; &quot;Hop.&quot;&gt;&gt;
+[[Hop.]]
+&lt;&lt;/button&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="64" name="Lucky Me." tags="" position="1175,1550" size="100,100">As you lean in to try and snatch the ticket, a security guard grabs you firmly by the wrist.
+
+&#39;&#39;You&#39;ve been caught!&#39;&#39;
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Try to steal a ticket.&quot;&gt;&gt;
+[[Try to steal a ticket.]] 
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="The Unnoticed Bandit Ending." tags="" position="900,1725" size="100,100">The place is surrounded by bookshelves, and everyone’s heads are looking down, working hard on their studies… or sleeping.
+
+Approaching your target with great caution, you quickly snatch the ticket and move off swiftly. Taking a second to check you haven&#39;t been followed, you breathe a sigh of relief.
+
+&#39;&#39;&quot;Sucker,&quot; you think to yourself.&#39;&#39;
+
+You&#39;ve got a real knack for this.
+
+&#39;&#39;You&#39;ve achieved the Unnoticed Bandit Ending.&#39;&#39;
+
+&lt;&lt;button &quot;Play Again.&quot; Restart&gt;&gt;
+            [[Restart]]
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Crane." tags="" position="1400,1250" size="100,100">He catches you off guard with a straight jab! His fist lands directly to the stomach and winds you. You fall to the floor in defeat.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Fight him.&quot;&gt;&gt;
+[[Fight him.]] 
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Guard." tags="" position="1400,1125" size="100,100">You watch carefully before tucking your head in and manage to easily block the first straight jab. No time to think, your next move is: &lt;&lt;set $guarded to true&gt;&gt;
+
+&lt;&lt;button &quot;Counter-attack&quot; &quot;Counter.&quot;&gt;&gt;
+[[Counter.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Play defensive&quot; &quot;Defense.&quot;&gt;&gt;
+[[Defense.]] 
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Hop." tags="" position="1400,1375" size="100,100">You struggled to defend the straight jab, your palms don’t sting as much as you expected.
+
+&lt;&lt;button &quot;Counter-attack&quot; &quot;Counter.&quot;&gt;&gt;
+[[Counter.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Play defensive&quot; &quot;Defense.&quot;&gt;&gt;
+[[Defense.]] 
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Counter." tags="" position="1525,1175" size="100,100">&lt;&lt;if $guarded&gt;&gt;
+As you raise your head to accurately land your counter, you notice the follow up 
+attack with his other arm too late. He hits you in the side and you topple over.
+
+&lt;&lt;button &quot;Try Again&quot; &quot;Fight him.&quot;&gt;&gt;
+[[Fight him.]] 
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;else&gt;&gt;
+You grab his outstretched arm and pull him towards you, lining up your knee for a direct blow to the chest. It was devastating and he falls with a thud…
+
+&lt;&lt;button &quot;Claim your prize&quot; &quot;The Brawler Ending.&quot;&gt;&gt;
+[[The Brawler Ending.]] 
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Defense." tags="" position="1525,1325" size="100,100">Almost expecting it, you catch the second attack with your arm. Obscuring his vision slightly, you take the opportunity to direct a circular punch to his left shoulder…
+
+&lt;&lt;button &quot;Finish him&quot; &quot;The Brawler Ending.&quot;&gt;&gt;
+[[The Brawler Ending.]] 
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="The Brawler Ending." tags="" position="1650,1275" size="100,100">&lt;&lt;if visited(&quot;Defense.&quot;) &gt; 0&gt;&gt;
+&#39;&#39;One last spectacular blow sends him back to his seat.&#39;&#39;
+&lt;&lt;/if&gt;&gt;
+
+You take his ticket before he comes to his senses and hastily make your retreat.
+
+&#39;&#39;You revel in your victory, ticket in hand, revenge satisfied.&#39;&#39;
+
+&#39;&#39;You&#39;ve achieved the Brawler Ending.&#39;&#39;
+
+&lt;&lt;button &quot;Play Again.&quot; Restart&gt;&gt;
+            [[Restart]]
 &lt;&lt;/button&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */

@@ -171,6 +171,32 @@ You watch with anticipation as you crawl nearer the front of the queue.
 <</if>>
 
 
+:: Counter. {"position":"1525,1175","size":"100,100"}
+<<if $guarded>>
+As you raise your head to accurately land your counter, you notice the follow up 
+attack with his other arm too late. He hits you in the side and you topple over.
+
+<<button "Try Again" "Fight him.">>
+[[Fight him.]] 
+<</button>>
+
+<<else>>
+You grab his outstretched arm and pull him towards you, lining up your knee for a direct blow to the chest. It was devastating and he falls with a thud…
+
+<<button "Claim your prize" "The Brawler Ending.">>
+[[The Brawler Ending.]] 
+<</button>>
+<</if>>
+
+
+:: Crane. {"position":"1400,1250","size":"100,100"}
+He catches you off guard with a straight jab! His fist lands directly to the stomach and winds you. You fall to the floor in defeat.
+
+<<button "Try Again" "Fight him.">>
+[[Fight him.]] 
+<</button>>
+
+
 :: Crowd. {"position":"1200,400","size":"100,100"}
 ''The plan was simple.''
 
@@ -183,6 +209,14 @@ The night of the ball rolls around and you wait near the main entrance for a big
 Me neither.
 
 ''Now inside, you decide to try and [[find your friends.|Meet your friends.]]''
+
+
+:: Defense. {"position":"1525,1325","size":"100,100"}
+Almost expecting it, you catch the second attack with your arm. Obscuring his vision slightly, you take the opportunity to direct a circular punch to his left shoulder…
+
+<<button "Finish him" "The Brawler Ending.">>
+[[The Brawler Ending.]] 
+<</button>>
 
 
 :: Do you hide somewhere on campus and hope you don't get caught {"position":"1100,125","size":"100,100"}
@@ -244,6 +278,26 @@ The estimated wait time is ''50 minutes...''
 <<button "Wait in line" "Wait in line.">>
 [[Wait in line.]]
 <</button>>
+
+
+:: Fight him. {"position":"1275,1250","size":"100,100"}
+''You run towards him and he notices your presence. '' <<set $guarded to false>>
+
+He stands up from his seat, and looks you in the eye. The feeling of resentment emits from your very being. You both know this isn't going to end well for one of you.
+
+<<button "Try your hand at the crane stance from Karate Kid" "Crane.">>
+[[Crane.]]
+<</button>>
+
+<<button "Assume a boxer’s guard with your fists close to your chest" "Guard.">>
+[[Guard.]]
+<</button>>
+
+<<button "Hop lightly with your fingers outstretched" "Hop.">>
+[[Hop.]]
+<</button>>
+
+
 
 
 :: GMB. {"position":"250,1625","size":"100,100"}
@@ -355,6 +409,18 @@ It's been a long time coming, but after so much blood, sweat, and tears, nothing
 <<button "Refresh the page" "Refresh the page.">>[[Refresh the page.]]<</button>>
 
 
+:: Guard. {"position":"1400,1125","size":"100,100"}
+You watch carefully before tucking your head in and manage to easily block the first straight jab. No time to think, your next move is: <<set $guarded to true>>
+
+<<button "Counter-attack" "Counter.">>
+[[Counter.]] 
+<</button>>
+
+<<button "Play defensive" "Defense.">>
+[[Defense.]] 
+<</button>>
+
+
 :: Hamilton. {"position":"525,1625","size":"100,100"}
 ''You decide to join the queue in the Hamilton.''
 
@@ -393,6 +459,18 @@ It's dark outside now and you can hear a crowd in the distance. This is it. The 
 
 <<button "Make a run for it!!" "Make a run for it!!">>
 [[Make a run for it!!]]
+<</button>>
+
+
+:: Hop. {"position":"1400,1375","size":"100,100"}
+You struggled to defend the straight jab, your palms don’t sting as much as you expected.
+
+<<button "Counter-attack" "Counter.">>
+[[Counter.]] 
+<</button>>
+
+<<button "Play defensive" "Defense.">>
+[[Defense.]] 
 <</button>>
 
 
@@ -515,6 +593,16 @@ You're greeted with a comfortably busy carriage with plenty of seats for the tak
 
 <<button "Continue" "You Arrive.">>
 [[You Arrive.]]
+<</button>>
+
+
+:: Lucky Me. {"position":"1175,1550","size":"100,100"}
+As you lean in to try and snatch the ticket, a security guard grabs you firmly by the wrist.
+
+''You've been caught!''
+
+<<button "Try Again" "Try to steal a ticket.">>
+[[Try to steal a ticket.]] 
 <</button>>
 
 
@@ -713,6 +801,218 @@ You are overcome with excitement and happiness. All that work and time payed off
 <</if>>
 
 
+:: Search the Arts Building. {"position":"1050,1550","size":"100,100"}
+<<set $visits to $visits+1>>\
+<<if $visits>9>>\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn't bring their tickets back again.
+
+<<button "Try Again" "Try to steal a ticket.">>
+[[Try to steal a ticket.]] 
+<</button>>
+
+<<elseif $visits%3==0>>
+Looks like someone was using the printer. You take a closer look and see a T-Ball 
+ticket!! Luckily, the owner seems to have passed out, probably from waiting too long.
+
+<<button "Lucky Me" "Lucky Me.">>
+[[Lucky Me.]]
+<</button>>
+<<else>>\
+Pacing around the Arts Building, all you can see are your friends, who are obviously off limits.
+
+I mean, you wouldn't steal THEIR tickets, right?? You aren't some heartless monster.
+
+<<button "Search the Berkley" "Search the Library.">>
+[[Search the Library.]] 
+<</button>>
+
+<<button "Search the Pavilion" "Search the Pavilion.">>
+[[Search the Pavilion.]]
+<</button>>
+
+<<if $visits < 6>>\
+<<button "Search the Buttery" "Search the Buttery.">>
+[[Search the Buttery.]] 
+<</button>>
+<</if>>
+<</if>>
+
+
+:: Search the Buttery. {"position":"750,1550","size":"100,100"}
+<<set $visits to $visits+1>>\
+<<if $visits>9>>\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn't bring their tickets back again.
+
+<<button "Try Again" "Try to steal a ticket.">>
+[[Try to steal a ticket.]] 
+<</button>>
+
+<<else>>\
+You had a look around, and didn't notice anyone with a ticket on their table. Maybe you should come back later.
+
+<<button "Search the Hamilton" "Search the Hamilton.">>
+[[Search the Hamilton.]]
+<</button>>
+
+<<button "Search the Berkley" "Search the Library.">>
+[[Search the Library.]] 
+<</button>>
+
+<<button "Search the Arts Building" "Search the Arts Building.">>
+[[Search the Arts Building.]]
+<</button>>
+<</if>>
+
+
+:: Search the Hamilton. {"position":"750,1250","size":"100,100"}
+<<set $visits to $visits+1>>\
+<<if $visits>9>>\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn't bring their tickets back again.
+
+<<button "Try Again" "Try to steal a ticket.">>
+[[Try to steal a ticket.]] 
+<</button>>
+
+<<elseif $visits%4==0>>\
+Looks like someone was using the printer. You take a closer look and see a T-Ball 
+ticket!! Luckily, the owner seems to have passed out, probably from waiting too long.
+
+<<button "Don't mind if I do" "The Real Ending.">>
+[[The Too Easy Ending.]]
+<</button>>
+<<else>>
+Searching the Hamilton head to toe, you find nothing, not even in the library.
+
+<<button "Search the Berkley" "Search the Library.">>
+[[Search the Library.]] 
+<</button>>
+
+<<button "Search the Pavilion" "Search the Pavilion.">>
+[[Search the Pavilion.]]
+<</button>>
+
+<<if $visits < 6>>\
+<<button "Search the Buttery" "Search the Buttery.">>
+[[Search the Buttery.]] 
+<</button>>
+<</if>>
+<</if>>
+
+
+:: Search the Library. {"position":"900,1400","size":"100,100"}
+<<set $visits to $visits+1>>
+<<if $visits>9>>
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn't bring their tickets back again.
+
+<<button "Try Again" "Try to steal a ticket.">>
+[[Try to steal a ticket.]] 
+<</button>>
+
+<<else>>
+You think to yourself it's better not to check the Kinsella library. Wayyy too open and too many floors. You spot some tickets in the Usher library but there's too many eyes around.
+
+<<if $visits%2==0>>
+Despite the place being so crowded, you finally find a victim on the first floor of the Berkeley.
+
+<<button "Get Closer" "The Unnoticed Bandit Ending.">>
+[[The Unnoticed Bandit Ending.]] 
+<</button>>
+<<else>>
+Today is not your lucky day. Plus, you feel like you went up one flight of stairs too many…
+
+<<button "Search the Hamilton" "Search the Hamilton.">>
+[[Search the Hamilton.]] 
+<</button>>
+
+<<button "Search the Pavilion" "Search the Pavilion.">>
+[[Search the Pavilion.]]
+<</button>>
+
+<<button "Search the Arts Building" "Search the Arts Building.">>
+[[Search the Arts Building.]] 
+<</button>>
+
+<<if $visits < 6>>
+<<button "Search the Buttery" "Search the Buttery.">>
+[[Search the Buttery.]]
+<</button>>
+<</if>>
+<</if>>
+<</if>>
+
+
+:: Search the Pavilion. {"position":"1050,1250","size":"100,100"}
+<<set $visits to $visits+1>>\
+<<if $visits>9>>\
+Despite your efforts, the day is coming to and end and you failed to find a ticket.
+
+Everyone went home and didn't bring their tickets back again.
+
+<<button "Try Again" "Try to steal a ticket.">>
+[[Try to steal a ticket.]] 
+<</button>>
+
+<<elseif $visits > 3>>\
+As you are walking up the steps, you recognise someone sitting outside….
+
+It's the coworker that got you fired last summer for something he did!
+
+…And he just so happens to have a ticket poking out of his shirt pocket.
+
+<<button "Fight him" "Fight him.">>
+[[Fight him.]]
+<</button>>
+
+<<else>>\
+As you are walking towards the Pavilion, you can see from afar that it's definitely open. However it seems like nobody is around yet. Better look elsewhere first.
+
+<<button "Search the Hamilton" "Search the Hamilton.">>
+[[Search the Hamilton.]]
+<</button>>
+
+<<button "Search the Berkley" "Search the Library.">>
+[[Search the Library.]] 
+<</button>>
+
+<<button "Search the Arts Building" "Search the Arts Building.">>
+[[Search the Arts Building.]]
+<</button>>
+
+<</if>>
+
+
+:: Search. {"position":"900,1100","size":"100,100"}
+''Where do you look?''
+
+<<button "Arts Building" "Search the Arts Building.">>
+[[Search the Arts Building.]]
+<</button>>
+
+<<button "Buttery" "Search the Buttery.">>
+[[Search the Buttery.]]
+<</button>>
+
+<<button "Berkley Library" "Search the Library.">>
+[[Search the Library.]]
+<</button>>
+
+<<button "Pavilion" "Search the Pavilion.">>
+[[Search the Pavilion.]]
+<</button>>
+
+<<button "Hamilton" "Search the Hamilton.">>
+[[Search the Hamilton.]]
+<</button>>
+
+
 :: Server Crash. {"position":"200,1000","size":"100,100"}
 ''You reload the page to be greeted with... a loading symbol?''
 ''You reload again...''
@@ -787,6 +1087,8 @@ OR
 
 <<set $serversDown to either(true, false, false)>>
 
+<<set $visits to 0>>
+
 <<set $passages = $passages.shuffle()>>
 
 <<cacheaudio "ticking" "aud/ticking.wav">>
@@ -845,6 +1147,22 @@ The guard, looking frustrated, picks you up and throws you out the main gate.
 
 <<button "Try Another Way" "Ask your friends if they have a spare ticket you can buy.">>
 [[Ask your friends if they have a spare ticket you can buy.]]
+<</button>>
+
+
+:: The Brawler Ending. {"position":"1650,1275","size":"100,100"}
+<<if visited("Defense.") > 0>>
+''One last spectacular blow sends him back to his seat.''
+<</if>>
+
+You take his ticket before he comes to his senses and hastily make your retreat.
+
+''You revel in your victory, ticket in hand, revenge satisfied.''
+
+''You've achieved the Brawler Ending.''
+
+<<button "Play Again." Restart>>
+            [[Restart]]
 <</button>>
 
 
@@ -972,8 +1290,44 @@ The night of the ball rolls around and the atmosphere is great.
 <</timed>>
 
 
-:: Try to steal a ticket. {"position":"875,675","size":"100,100"}
-TODO
+:: The Too Easy Ending. {"position":"600,1100","size":"100,100"}
+You slip away unnoticed, the stolen T-Ball ticket at long last in your possession. You're ready to enjoy yourself to the fullest… but there's just one problem: a slight feeling of guilt that looms over you.
+
+Knowing that it's too late to turn back now, you settle in to your new life of crime.
+
+''You've achieved the Too Easy Ending.'''
+
+<<button "Play Again." Restart>>
+            [[Restart]]
+<</button>>
+
+
+:: The Unnoticed Bandit Ending. {"position":"900,1725","size":"100,100"}
+The place is surrounded by bookshelves, and everyone’s heads are looking down, working hard on their studies… or sleeping.
+
+Approaching your target with great caution, you quickly snatch the ticket and move off swiftly. Taking a second to check you haven't been followed, you breathe a sigh of relief.
+
+''"Sucker," you think to yourself.''
+
+You've got a real knack for this.
+
+''You've achieved the Unnoticed Bandit Ending.''
+
+<<button "Play Again." Restart>>
+            [[Restart]]
+<</button>>
+
+
+:: Try to steal a ticket. {"position":"900,800","size":"100,100"}
+''You know what has to be done: You have to steal a ticket!'' <<set $visits to 0>>
+
+You're out of options and you're not just gonna miss T-Ball.
+
+If you are going to steal a ticket, it has to be today while everyone has their ticket with them, otherwise you will miss the opportunity and they will bring their tickets home.
+
+<<button "Start Searching" "Search.">>
+[[Search.]]
+<</button>>
 
 
 :: Use a disguise. {"position":"1075,650","size":"100,100"}
