@@ -12,7 +12,7 @@ T-Ball Story
 }
 
 
-:: Arts Building. {"position":"125,1625","size":"100,100"}
+:: Arts Building. {"position":"225,1725","size":"100,100"}
 ''You decide to join the queue in the Arts Building.''
 
 The queue wraps all the way through the building, past the Perch and down to the end of the Ed Burke Lecture Hall.
@@ -25,7 +25,7 @@ The estimated wait time is ''60 minutes...''
 <</button>>
 
 
-:: Ask your friends if they have a spare ticket you can buy. {"position":"950,225","size":"100,100"}
+:: Ask your friends if they have a spare ticket you can buy. {"position":"1050,325","size":"100,100"}
 No luck!!
 
 None of your friends have a spare ticket you can buy from them. You're absolutely devestated.
@@ -45,7 +45,7 @@ OR
 <</button>>
 
 
-:: Behind a tree. {"position":"1450,525","size":"100,100"}
+:: Behind a tree. {"position":"1550,625","size":"100,100"}
 ''You jump behind a tree, making yourself as tall and as slim as possible to hide behind the trunk.''
 
 Unfortunately, the trees in the Rose Garden are nothing to get excited about. As security is walking by, they notice you, plain as day, sticking out from behind the tree. They promptly grab you and remove you from the premises.
@@ -55,7 +55,7 @@ Unfortunately, the trees in the Rose Garden are nothing to get excited about. As
 <</button>>
 
 
-:: Bus {"position":"250,1125","size":"100,100"}
+:: Bus {"position":"350,1225","size":"100,100"}
 <<audio "bus"  play>>\
 ''You opt for the bus.''
 
@@ -69,7 +69,7 @@ You make your way to the bus stop and you aren't waiting long before the 140 arr
 <</button>>
 
 
-:: Chance getting out to use the bathroom {"position":"1475,0","size":"100,100"}
+:: Chance getting out to use the bathroom {"position":"1575,100","size":"100,100"}
 ''The urge was too strong! You couldn't wait.''
 
 You jump out and run around the corner. But just as you turn the corner there are 3 men standing there.
@@ -81,7 +81,7 @@ You jump out and run around the corner. But just as you turn the corner there ar
 <</button>>
 
 
-:: Climb. {"position":"1200,250","size":"100,100"}
+:: Climb. {"position":"1300,350","size":"100,100"}
 ''The plan was simple...''
 
 You scouted out the college the night before, looking for ways to get in. You came across a fence near the rugby pitch that was just out of the line of sight of security.
@@ -94,7 +94,7 @@ The night of the ball rolls around and you return to the fence. Once again you u
 
 
 
-:: Correct Code. {"position":"600,550","size":"100,100"}
+:: Correct Code. {"position":"700,650","size":"100,100"}
 <<if visited("Correct Code.")==1>>
 We're in.
 
@@ -132,37 +132,41 @@ You watch with anticipation as you crawl nearer the front of the queue.
 <</timed>>
 
 <<else>>
-  <<if visited("Correct Code.")<10>>
+  <<if visited("Correct Code.")<5>>
   You try again...
-  <<elseif visited("Correct Code.")<20>>
+  <<elseif visited("Correct Code.")<10>>
+  This has to work eventually...
+  <<elseif visited("Correct Code.")<15>>
   This is getting tiring...
+  <<elseif visited("Correct Code.")<20>>
+  You're getting close, I can feel it...
   <<else>>
   Why are you still trying?
 <</if>>
 
 <<nobr>>
-<<timed  1s>><<set $position1 to  Math.floor(Math.random() * (404 - 200 + 1)) + 200>>
-<<type 20ms>>
+<<timed  0.5s>><<set $position1 to  Math.floor(Math.random() * (404 - 200 + 1)) + 200>>
+<<type 10ms>>
 ''"You are in queue position: $position1"''
 <</type>>
 <</timed>>
 <</nobr>>
 <<nobr>>
-<<timed  1.5s>><<set $position2 to  Math.floor(Math.random() * (60 - 25 + 1)) + 25>>
-<<type 20ms>>
+<<timed  0.75s>><<set $position2 to  Math.floor(Math.random() * (60 - 25 + 1)) + 25>>
+<<type 10ms>>
 ''"You are in queue position: $position2"''
 <</type>>
 <</timed>>
 <</nobr>>
 <<nobr>>
-<<timed  2s>>
-<<type 20ms>>
+<<timed  1s>>
+<<type 10ms>>
 ''"You are in queue position: 1"''
 <</type>>
 <</timed>>
 <</nobr>>
-<<timed 2.5s>>
-<<type 20ms>>
+<<timed 1.25s>>
+<<type 10ms>>
 <<button "Search for Tickets" "Search for Tickets.">>
 [[Search for Tickets.]]
 <</button>>
@@ -171,7 +175,7 @@ You watch with anticipation as you crawl nearer the front of the queue.
 <</if>>
 
 
-:: Counter. {"position":"1525,1175","size":"100,100"}
+:: Counter. {"position":"1625,1275","size":"100,100"}
 <<if $guarded>>
 As you raise your head to accurately land your counter, you notice the follow up 
 attack with his other arm too late. He hits you in the side and you topple over.
@@ -189,7 +193,7 @@ You grab his outstretched arm and pull him towards you, lining up your knee for 
 <</if>>
 
 
-:: Crane. {"position":"1400,1250","size":"100,100"}
+:: Crane. {"position":"1500,1350","size":"100,100"}
 He catches you off guard with a straight jab! His fist lands directly to the stomach and winds you. You fall to the floor in defeat.
 
 <<button "Try Again" "Fight him.">>
@@ -197,7 +201,7 @@ He catches you off guard with a straight jab! His fist lands directly to the sto
 <</button>>
 
 
-:: Crowd. {"position":"1200,400","size":"100,100"}
+:: Crowd. {"position":"1300,500","size":"100,100"}
 ''The plan was simple.''
 
 You'd blend in, plain and simple. With a big enough group you'd have no trouble getting through the main gate.
@@ -211,7 +215,7 @@ Me neither.
 ''Now inside, you decide to try and [[find your friends.|Meet your friends.]]''
 
 
-:: Defense. {"position":"1525,1325","size":"100,100"}
+:: Defense. {"position":"1625,1425","size":"100,100"}
 Almost expecting it, you catch the second attack with your arm. Obscuring his vision slightly, you take the opportunity to direct a circular punch to his left shoulder…
 
 <<button "Finish him" "The Brawler Ending.">>
@@ -219,7 +223,7 @@ Almost expecting it, you catch the second attack with your arm. Obscuring his vi
 <</button>>
 
 
-:: Do you hide somewhere on campus and hope you don't get caught {"position":"1100,125","size":"100,100"}
+:: Do you hide somewhere on campus and hope you don't get caught {"position":"1200,225","size":"100,100"}
 It's the only rational choice. You have to hide on campus.
 
 You get your suit on and ready your supplies.
@@ -247,7 +251,7 @@ and hope you actually fit!
 <</nobr>>
 
 
-:: Do you sneak in on the night {"position":"1075,400","size":"100,100"}
+:: Do you sneak in on the night {"position":"1175,500","size":"100,100"}
 You really want to go to this ball. Everyone you know managed to get a ticket and they've been talking about it ever since. 
 
 ''You decide to sneak in.''
@@ -267,7 +271,7 @@ You really want to go to this ball. Everyone you know managed to get a ticket an
 <</button>>
 
 
-:: Exam Hall. {"position":"400,1625","size":"100,100"}
+:: Exam Hall. {"position":"500,1725","size":"100,100"}
 ''You decide to join the queue in the Exam Hall.''
 
 There's not a lot of space in the building, so the queue extends outside as far as the Book of Kells.
@@ -280,7 +284,7 @@ The estimated wait time is ''50 minutes...''
 <</button>>
 
 
-:: Fight him. {"position":"1275,1250","size":"100,100"}
+:: Fight him. {"position":"1375,1350","size":"100,100"}
 ''You run towards him and he notices your presence. '' <<set $guarded to false>>
 
 He stands up from his seat, and looks you in the eye. The feeling of resentment emits from your very being. You both know this isn't going to end well for one of you.
@@ -300,7 +304,7 @@ He stands up from his seat, and looks you in the eye. The feeling of resentment 
 
 
 
-:: GMB. {"position":"250,1625","size":"100,100"}
+:: GMB. {"position":"350,1725","size":"100,100"}
 ''You decide to join the queue in the GMB.''
 
 The queue spills right out the door onto the cobbles, continuing the whole way up the stairs.
@@ -313,7 +317,7 @@ The estimated wait time is ''55 minutes...''
 <</button>>
 
 
-:: Gate A. {"position":"1200,525","size":"100,100"}
+:: Gate A. {"position":"1300,625","size":"100,100"}
 ''You decide to disgugise yourself as a caterer.''
 
 You pop on your best chef's disguise, pulling all of the stops, and make your way to Gate A. Upon arrival, you're feeling good. 
@@ -327,7 +331,7 @@ All is looking well until you feel a hand on your shoulder. You turn to face a s
 <</button>>
 
 
-:: Gate B. {"position":"1200,650","size":"100,100"}
+:: Gate B. {"position":"1300,750","size":"100,100"}
 ''You decide to disguise yourself as Sound Crew.''
 
 With all of the different sound crews and technicians coming and going through this entrance, there could be very little security to slow them down. It was perfect.
@@ -339,7 +343,7 @@ On the night, you arrive at Gate B and are greeted with the manic pacing of soun
 <</button>>
 
 
-:: Gate C. {"position":"1200,775","size":"100,100"}
+:: Gate C. {"position":"1300,875","size":"100,100"}
 ''You decide to disguise yourself as the Emergency Services.''
 
 Seems straight forward enough, just pop on a high-vis jacket and you're good to go. You make your way to the entrance and pass through without a problem. 
@@ -355,7 +359,7 @@ Not wanting to embarass yourself through your lack of First-Aid skills, you simp
 <</button>>
 
 
-:: Give Up. {"position":"875,550","size":"100,100"}
+:: Give Up. {"position":"975,650","size":"100,100"}
 <<audio "intense" fadeoverto 2 0>>\
 <<run setTimeout(function () { $.wiki('<<audio "intense" stop>>'); }, 2000)>>\
 You decide to give up searching for a ticket. What was the point in trying? Obviously there were going to be none left.
@@ -376,7 +380,7 @@ But you weren't giving up for good just yet.
 
 
 
-:: Go for a drink. {"position":"1525,325","size":"100,100"}
+:: Go for a drink. {"position":"1625,425","size":"100,100"}
 You order medium mango juice, happy to be there, laughing with your friends.
 
 The laughter is cut short, however, when suddenly a guard feels suspicious you and starts to make their way over.
@@ -397,7 +401,7 @@ In shock, you struggle to think.
 
 
 
-:: Go to the website. {"position":"225,550","size":"100,100"}
+:: Go to the website. {"position":"325,650","size":"100,100"}
 <img src="img/ticketmaster.png" width="50%">
 ''You open the Ticketmaster tab to be faced with the waiting room.''
 
@@ -409,7 +413,7 @@ It's been a long time coming, but after so much blood, sweat, and tears, nothing
 <<button "Refresh the page" "Refresh the page.">>[[Refresh the page.]]<</button>>
 
 
-:: Guard. {"position":"1400,1125","size":"100,100"}
+:: Guard. {"position":"1500,1225","size":"100,100"}
 You watch carefully before tucking your head in and manage to easily block the first straight jab. No time to think, your next move is: <<set $guarded to true>>
 
 <<button "Counter-attack" "Counter.">>
@@ -421,7 +425,7 @@ You watch carefully before tucking your head in and manage to easily block the f
 <</button>>
 
 
-:: Hamilton. {"position":"525,1625","size":"100,100"}
+:: Hamilton. {"position":"625,1725","size":"100,100"}
 ''You decide to join the queue in the Hamilton.''
 
 Despite the trek across campus, it seems like the quietest choice. It takes you 10 minutes to get to the building.
@@ -436,7 +440,7 @@ The estimated wait time is ''45 minutes...''
 <</button>>
 
 
-:: Hide in the play house at the college nursery {"position":"1225,125","size":"100,100"}
+:: Hide in the play house at the college nursery {"position":"1325,225","size":"100,100"}
 ''The playhouse!''
 
 Of course why didn't anyone think of this before.
@@ -448,7 +452,7 @@ The plan is fool-proof. Nobodys going to check over here.
 <</button>>
 
 
-:: Hold it. I can wait just a bit longer!! {"position":"1600,125","size":"100,100"}
+:: Hold it. I can wait just a bit longer!! {"position":"1700,225","size":"100,100"}
 ''You perservere.''
 
 If you've waited this long you can wait a bit longer.
@@ -462,7 +466,7 @@ It's dark outside now and you can hear a crowd in the distance. This is it. The 
 <</button>>
 
 
-:: Hop. {"position":"1400,1375","size":"100,100"}
+:: Hop. {"position":"1500,1475","size":"100,100"}
 You struggled to defend the straight jab, your palms don’t sting as much as you expected.
 
 <<button "Counter-attack" "Counter.">>
@@ -474,7 +478,7 @@ You struggled to defend the straight jab, your palms don’t sting as much as yo
 <</button>>
 
 
-:: How do we get there? {"position":"325,1000","size":"100,100"}
+:: How do we get there? {"position":"425,1100","size":"100,100"}
 <<audio "countdown" volume 0.7 play>>\
 You rush into the courtyard, clutching your phone for dear life as you read the Trinity News article.
 
@@ -495,7 +499,7 @@ OR
 <</button>>
 
 
-:: In a recycling bin {"position":"1100,0","size":"100,100"}
+:: In a recycling bin {"position":"1200,100","size":"100,100"}
 ''"This spot has to work" you think.''
 
 No one's finding you here. Who checks the bins the night of Trinity Ball?
@@ -515,7 +519,7 @@ They open the bin and find you cowering in the corner.
 <</button>>
 
 
-:: In the bushes. {"position":"1550,650","size":"100,100"}
+:: In the bushes. {"position":"1650,750","size":"100,100"}
 You dive into a nearby bush, concealing yourself entirely. Security hears some rustling and comes to investigate. Holding your breath and staying completely still, you manage to evade them, remaining totally hidden. 
 
 ''"I've nearly made it," you think.''
@@ -527,7 +531,7 @@ Hearing more security on the way, there's only one thing to do.
 <</button>>
 
 
-:: Incorrect Code. {"position":"650,700","size":"100,100"}
+:: Incorrect Code. {"position":"750,800","size":"100,100"}
 ''"Invalid Code", the website alerts.''
 
 "What?!", you exclaim under your breath.
@@ -538,11 +542,11 @@ Hearing more security on the way, there's only one thing to do.
 <</button>>
 
 
-:: Init {"position":"100,425","size":"100,100"}
+:: Init {"position":"200,525","size":"100,100"}
 <<button "Begin the Story" "Start">>[[Start]]<</button>>
 
 
-:: It's late enough, you can hear people so you get out {"position":"1350,0","size":"100,100"}
+:: It's late enough, you can hear people so you get out {"position":"1450,100","size":"100,100"}
 ''You crawl your way out of the playhouse.''
 
 The coast seems to be clear!
@@ -561,7 +565,7 @@ You've been caught! It was too soon.
 <</button>>
 
 
-:: Keep Going. {"position":"250,1375","size":"100,100"}
+:: Keep Going. {"position":"350,1475","size":"100,100"}
 ''"Sorry, there's no time," you reply hastily.''
 
 The sooner you're in a queue, the better... even if it makes you a terrible friend.
@@ -571,7 +575,7 @@ The sooner you're in a queue, the better... even if it makes you a terrible frie
 <</button>>
 
 
-:: Luas {"position":"400,1125","size":"100,100"}
+:: Luas {"position":"500,1225","size":"100,100"}
 <<audio "luas" play>>\
 ''You opt for the Luas.''
 
@@ -596,7 +600,7 @@ You're greeted with a comfortably busy carriage with plenty of seats for the tak
 <</button>>
 
 
-:: Lucky Me. {"position":"1175,1550","size":"100,100"}
+:: Lucky Me. {"position":"1275,1650","size":"100,100"}
 As you lean in to try and snatch the ticket, a security guard grabs you firmly by the wrist.
 
 ''You've been caught!''
@@ -606,7 +610,7 @@ As you lean in to try and snatch the ticket, a security guard grabs you firmly b
 <</button>>
 
 
-:: Make a run for it!! {"position":"1725,125","size":"100,100"}
+:: Make a run for it!! {"position":"1825,225","size":"100,100"}
 ''You won't get caught now!''
 
 Just run a little further and you'll be home free.
@@ -628,7 +632,7 @@ OR
 <</button>>
 
 
-:: Meet your friends. {"position":"1325,325","size":"100,100"}
+:: Meet your friends. {"position":"1425,425","size":"100,100"}
 Searching through the crowds, you find your friends dancing to one side. You walk to join them but notice security frantically on the lookout for someone. You need to lay low in case they ask you for your ticket.
 
 ''"Let's go get a drink!" your friend Charlie suggests.''
@@ -640,7 +644,7 @@ You want to be careful, but you still need to enjoy the night.
 <</button>>
 
 
-:: Pick a queue. {"position":"325,1500","size":"100,100"}
+:: Pick a queue. {"position":"425,1600","size":"100,100"}
 ''You think about what the best queue to join would be:''
 
 <<button "Arts Building" "Arts Building.">>// 60 minutes
@@ -660,7 +664,7 @@ You want to be careful, but you still need to enjoy the night.
 <</button>> 
 
 
-:: Refresh the page again. {"position":"475,550","size":"100,100"}
+:: Refresh the page again. {"position":"575,650","size":"100,100"}
 <<if visited("Refresh the page again.") < 2>>
 <<audio "horn" volume 0.5 play>>\
 <</if>>
@@ -678,7 +682,7 @@ Let's do this.
 <span class='hide'>[[Incorrect Code.]][[WLFT0N3]][[TB4LLT1X]][[Correct Code.]]</span>
 
 
-:: Refresh the page. {"position":"350,550","size":"100,100"}
+:: Refresh the page. {"position":"450,650","size":"100,100"}
 ''...8:59 a.m.''
 You're sweating in anticipation. But it's fine! 
 
@@ -728,13 +732,13 @@ It's just you vs. ''6,000 other people''...
 <</nobr>>
 
 
-:: Restart {"position":"100,300","size":"100,100"}
+:: Restart {"position":"200,400","size":"100,100"}
 <<script>>
 state.restart();
 <<endscript>>
 
 
-:: Run left and hope {"position":"1725,250","size":"100,100"}
+:: Run left and hope {"position":"1825,350","size":"100,100"}
 ''You've ran straight into the guards!!!!''
 
 All that work for nothing.
@@ -746,7 +750,7 @@ All that work for nothing.
 <</button>>
 
 
-:: Run right and hope {"position":"1725,0","size":"100,100"}
+:: Run right and hope {"position":"1825,100","size":"100,100"}
 <<audio "spy" volume 0.6 play>>\
 <<run UIBar.stow() >>
 <<script>>
@@ -770,8 +774,8 @@ You are overcome with excitement and happiness. All that work and time payed off
             <</button>>
 
 
-:: Search for Tickets. {"position":"725,550","size":"100,100"}
-<<if visited("Correct Code.") > 30>>
+:: Search for Tickets. {"position":"825,650","size":"100,100"}
+<<if visited("Correct Code.") > 25>>
 	<<audio "intense" fadeoverto 2 0>>
 	<<run setTimeout(function () { $.wiki('<<audio "intense" stop>>'); }, 2000)>>
 	 ''"1 Ticket Found!"
@@ -801,7 +805,7 @@ You are overcome with excitement and happiness. All that work and time payed off
 <</if>>
 
 
-:: Search the Arts Building. {"position":"1050,1550","size":"100,100"}
+:: Search the Arts Building. {"position":"1150,1650","size":"100,100"}
 <<set $visits to $visits+1>>\
 <<if $visits>9>>\
 Despite your efforts, the day is coming to and end and you failed to find a ticket.
@@ -840,7 +844,7 @@ I mean, you wouldn't steal THEIR tickets, right?? You aren't some heartless mons
 <</if>>
 
 
-:: Search the Buttery. {"position":"750,1550","size":"100,100"}
+:: Search the Buttery. {"position":"850,1650","size":"100,100"}
 <<set $visits to $visits+1>>\
 <<if $visits>9>>\
 Despite your efforts, the day is coming to and end and you failed to find a ticket.
@@ -868,7 +872,7 @@ You had a look around, and didn't notice anyone with a ticket on their table. Ma
 <</if>>
 
 
-:: Search the Hamilton. {"position":"750,1250","size":"100,100"}
+:: Search the Hamilton. {"position":"850,1350","size":"100,100"}
 <<set $visits to $visits+1>>\
 <<if $visits>9>>\
 Despite your efforts, the day is coming to and end and you failed to find a ticket.
@@ -905,7 +909,7 @@ Searching the Hamilton head to toe, you find nothing, not even in the library.
 <</if>>
 
 
-:: Search the Library. {"position":"900,1400","size":"100,100"}
+:: Search the Library. {"position":"1000,1500","size":"100,100"}
 <<set $visits to $visits+1>>
 <<if $visits>9>>
 Despite your efforts, the day is coming to and end and you failed to find a ticket.
@@ -949,7 +953,7 @@ Today is not your lucky day. Plus, you feel like you went up one flight of stair
 <</if>>
 
 
-:: Search the Pavilion. {"position":"1050,1250","size":"100,100"}
+:: Search the Pavilion. {"position":"1150,1350","size":"100,100"}
 <<set $visits to $visits+1>>\
 <<if $visits>9>>\
 Despite your efforts, the day is coming to and end and you failed to find a ticket.
@@ -989,7 +993,7 @@ As you are walking towards the Pavilion, you can see from afar that it's definit
 <</if>>
 
 
-:: Search. {"position":"900,1100","size":"100,100"}
+:: Search. {"position":"1000,1200","size":"100,100"}
 ''Where do you look?''
 
 <<button "Arts Building" "Search the Arts Building.">>
@@ -1013,7 +1017,7 @@ As you are walking towards the Pavilion, you can see from afar that it's definit
 <</button>>
 
 
-:: Server Crash. {"position":"200,1000","size":"100,100"}
+:: Server Crash. {"position":"300,1100","size":"100,100"}
 ''You reload the page to be greeted with... a loading symbol?''
 ''You reload again...''
 ''...and again.''
@@ -1034,7 +1038,7 @@ You don't even hesitate. You grab your phone, your student ID, and your keys and
 <</button>>
 
 
-:: Start {"position":"100,550","size":"100,100"}
+:: Start {"position":"200,650","size":"100,100"}
 <<audio "ticking" loop play>>
 <<timed 2s>><<type 40ms>>''...February 28th 202X''<</type>><</timed>>
 <<timed 3s>><<type 40ms>>''...8:58a.m.''<</type>><</timed>>
@@ -1046,7 +1050,7 @@ You don't even hesitate. You grab your phone, your student ID, and your keys and
 <<timed 14s>><<type 40ms>><<button "Go to the website" "Go to the website.">>[[Go to the website.]]<</button>><</type>><</timed>>
 
 
-:: Stay in the playhouse for another while longer {"position":"1475,125","size":"100,100"}
+:: Stay in the playhouse for another while longer {"position":"1575,225","size":"100,100"}
 You don't want to chance getting caught so you stay there a little while longer. Your phones dead and you don't know where your friends are.
 
 The sudden urge for the bathroom comes after all them beers you had trying to pass the time.
@@ -1066,7 +1070,7 @@ OR
 <</button>>
 
 
-:: StoryInit {"position":"100,725","size":"100,100"}
+:: StoryInit {"position":"200,825","size":"100,100"}
 <<run UIBar.stow() >>
 <<set $randomString to Math.random().toString(28).substring(6).toUpperCase()>>
 <<set $fakeString to $randomString.replace(/./g, function(char) {
@@ -1119,7 +1123,7 @@ OR
 <<cacheaudio "spy" "aud/spy.mp3">>
 
 
-:: TB4LLT1X {"position":"400,700","size":"100,100"}
+:: TB4LLT1X {"position":"500,800","size":"100,100"}
 ''"TB4LLT1-"''
 
 "THAT'S NOT THE CODE", you think to yourself. 
@@ -1131,7 +1135,7 @@ OR
 <</button>>
 
 
-:: Tell the truth. {"position":"1725,375","size":"100,100"}
+:: Tell the truth. {"position":"1825,475","size":"100,100"}
 You stand there in silence and turn a bit pale.
 The guard, now more suspicious, asks again. 
 
@@ -1150,7 +1154,7 @@ The guard, looking frustrated, picks you up and throws you out the main gate.
 <</button>>
 
 
-:: The Brawler Ending. {"position":"1650,1275","size":"100,100"}
+:: The Brawler Ending. {"position":"1750,1375","size":"100,100"}
 <<if visited("Defense.") > 0>>
 ''One last spectacular blow sends him back to his seat.''
 <</if>>
@@ -1166,7 +1170,7 @@ You take his ticket before he comes to his senses and hastily make your retreat.
 <</button>>
 
 
-:: The Jinx Ending. {"position":"500,350","size":"100,100"}
+:: The Jinx Ending. {"position":"600,450","size":"100,100"}
 <<audio "intense" fadeoverto 2 0>>\
 <<run setTimeout(function () { $.wiki('<<audio "intense" stop>>'); }, 2000)>>\
 <<run UIBar.stow() >>
@@ -1197,7 +1201,7 @@ You feel sick. Why would you jinx yourself like that? What more can you do now?
 <<button "Try Again" "Restart">>[[Try Again.|Restart]]<</button>>
 
 
-:: The Persistence Ending. {"position":"500,225","size":"100,100"}
+:: The Persistence Ending. {"position":"600,325","size":"100,100"}
 <<audio "holy" play>>
 <<run UIBar.stow() >>
 <<script>>
@@ -1227,7 +1231,7 @@ The night of T-Ball rolls around and the energy is immense. With so many great a
             <</if>><</if>><</if>><<if visited("The Persistence Ending.") <= 3>><<button "Continue" "The Persistence Ending.">><</button>><</if>>
 
 
-:: The Time Management Ending. {"position":"325,1900","size":"100,100"}
+:: The Time Management Ending. {"position":"425,2000","size":"100,100"}
 <<audio "crowd" fadeoverto 2 0>>\
 <<run setTimeout(function () { $.wiki('<<audio "crowd" stop>>'); }, 2000)>>\
 <<audio "tunes" volume 0 play>>\
@@ -1290,7 +1294,7 @@ The night of the ball rolls around and the atmosphere is great.
 <</timed>>
 
 
-:: The Too Easy Ending. {"position":"600,1100","size":"100,100"}
+:: The Too Easy Ending. {"position":"700,1200","size":"100,100"}
 You slip away unnoticed, the stolen T-Ball ticket at long last in your possession. You're ready to enjoy yourself to the fullest… but there's just one problem: a slight feeling of guilt that looms over you.
 
 Knowing that it's too late to turn back now, you settle in to your new life of crime.
@@ -1302,7 +1306,7 @@ Knowing that it's too late to turn back now, you settle in to your new life of c
 <</button>>
 
 
-:: The Unnoticed Bandit Ending. {"position":"900,1725","size":"100,100"}
+:: The Unnoticed Bandit Ending. {"position":"1000,1825","size":"100,100"}
 The place is surrounded by bookshelves, and everyone’s heads are looking down, working hard on their studies… or sleeping.
 
 Approaching your target with great caution, you quickly snatch the ticket and move off swiftly. Taking a second to check you haven't been followed, you breathe a sigh of relief.
@@ -1318,7 +1322,7 @@ You've got a real knack for this.
 <</button>>
 
 
-:: Try to steal a ticket. {"position":"900,800","size":"100,100"}
+:: Try to steal a ticket. {"position":"1000,900","size":"100,100"}
 ''You know what has to be done: You have to steal a ticket!'' <<set $visits to 0>>
 
 You're out of options and you're not just gonna miss T-Ball.
@@ -1330,7 +1334,7 @@ If you are going to steal a ticket, it has to be today while everyone has their 
 <</button>>
 
 
-:: Use a disguise. {"position":"1075,650","size":"100,100"}
+:: Use a disguise. {"position":"1175,750","size":"100,100"}
 ''You decide to use a disguise to get through one of the three main service entrances on the night.''
 
 There are three gates: A, B and C. Each gate leads you to a different part of Trinity and is assigned to a different crew. Gate A is dedicated to catering and is where all the food trucks will be moving through, Gate B is where the sound crew and technicians will be operating from, and Gate C is designated to emergency services.
@@ -1348,7 +1352,7 @@ There are three gates: A, B and C. Each gate leads you to a different part of Tr
 <</button>>
 
 
-:: WLFT0N3 {"position":"525,700","size":"100,100"}
+:: WLFT0N3 {"position":"625,800","size":"100,100"}
 ''"WLFT0N-"''
 
 As you type the code into the box, you realise what you've actually been typing.
@@ -1360,7 +1364,7 @@ As you type the code into the box, you realise what you've actually been typing.
 <</button>>
 
 
-:: Wait in line. {"position":"325,1775","size":"100,100"}
+:: Wait in line. {"position":"425,1875","size":"100,100"}
 <<audio "countdown" stop>>\
 <<audio "countdown_end" play>>\
 <<audio "crowd"  play>>\
@@ -1450,7 +1454,7 @@ You move closer...
 <</if>>
 
 
-:: Wait. {"position":"400,1375","size":"100,100"}
+:: Wait. {"position":"500,1475","size":"100,100"}
 ''You decide to wait.'' <<set $timeLeft to $timeLeft-5>> 
 
 Charlie's been with you through thick and thin. It's the least you can do.
@@ -1467,7 +1471,7 @@ Charlie arrives 5 minutes later, red in the face and out of breath.
 
 
 
-:: Where do you hide. {"position":"1325,650","size":"100,100"}
+:: Where do you hide. {"position":"1425,750","size":"100,100"}
 Walking through campus, you find yourself in the Rose Garden as several groups of security are seen walking about the area. It's too soon to head to the stages, there's too much heat. You spot security heading your way.
 
 ''"I'm not getting caught now."''
@@ -1483,7 +1487,7 @@ Walking through campus, you find yourself in the Rose Garden as several groups o
 <</button>>
 
 
-:: You Arrive. {"position":"325,1250","size":"100,100"}
+:: You Arrive. {"position":"425,1350","size":"100,100"}
 <<audio "bus" stop>>\
 <<audio "luas" stop>>\
 As you finish your journey, you hop off onto the street and start sprinting towards campus. 
@@ -1507,7 +1511,7 @@ You're already cutting it close and you can't miss out on these tickets.
 
 
 
-:: You stuff yourself into the playhouse {"position":"1350,125","size":"100,100"}
+:: You stuff yourself into the playhouse {"position":"1450,225","size":"100,100"}
 ''You've crammed yourself into the playhouse.''
 
 It's a tight fit but its the safest bet you think. Now for the waiting game.
