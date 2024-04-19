@@ -919,7 +919,7 @@ Everyone went home and didn't bring their tickets back again.
 <<else>>
 You think to yourself it's better not to check the Kinsella library. Wayyy too open and too many floors. You spot some tickets in the Usher library but there's too many eyes around.
 
-<<if $visits%2==0>>
+<<if $visits%3==0>>
 Despite the place being so crowded, you finally find a victim on the first floor of the Berkeley.
 
 <<button "Get Closer" "The Unnoticed Bandit Ending.">>
